@@ -1,0 +1,5 @@
+C:\dev\TeamOn\Server\TeamOn.Domain\obj\Debug\net7.0\TeamOn.Domain.csproj.AssemblyReference.cache
+C:\dev\TeamOn\Server\TeamOn.Domain\obj\Debug\net7.0\TeamOn.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\TeamOn\Server\TeamOn.Domain\obj\Debug\net7.0\TeamOn.Domain.AssemblyInfoInputs.cache
+C:\dev\TeamOn\Server\TeamOn.Domain\obj\Debug\net7.0\TeamOn.Domain.AssemblyInfo.cs
+C:\dev\TeamOn\Server\TeamOn.Domain\obj\Debug\net7.0\TeamOn.Domain.csproj.CoreCompileInputs.cache

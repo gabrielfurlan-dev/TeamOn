@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ZEwyRCxeMBMP5VjFXPTWQLiSZXwYICnDsrNpt1Ejepw=",
+  "Source": "TeamOn.Domain.Api",
+  "BasePath": "_content/TeamOn.Domain.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
