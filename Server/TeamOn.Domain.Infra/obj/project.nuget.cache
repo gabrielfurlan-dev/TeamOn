@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QYyRaw+ecGkD+R19ohq0NkoJHreElP6A4qaSluKQST2GgBsTgHNbLWVszgeYEk45MuIg4B7nAp8pWWtIGvITlA==",
+  "dgSpecHash": "jb6bqYiKEsx93UlDvQMGRh5AoEy+RX5q58T9PVqTdF5J05mvhfSmutMfywPm0vEke7sxmbuY79GfQDHeoS1Gjw==",
   "success": true,
   "projectFilePath": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.Infra\\TeamOn.Domain.Infra.csproj",
   "expectedPackageFiles": [
@@ -22,6 +22,8 @@
     "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
     "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\npgsql\\7.0.1\\npgsql.7.0.1.nupkg.sha512",
+    "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.1\\npgsql.entityframeworkcore.postgresql.7.0.1.nupkg.sha512",
     "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"

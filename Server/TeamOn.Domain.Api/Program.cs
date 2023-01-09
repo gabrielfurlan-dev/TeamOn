@@ -1,5 +1,5 @@
-using System.Diagnostics;
-using System.Reflection;
+using Microsoft.EntityFrameworkCore;
+using TeamOn.Domain.Infra.Contexts;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,8 +10,8 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// builder.Services.AddDbContext<Context>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("Connection")));
-
+builder.Services.AddDbContext<HumorContext>(options 
+    => options.UseNpgsql(builder.Configuration.GetConnectionString("your connection string here")));
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

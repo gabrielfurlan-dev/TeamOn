@@ -7,11 +7,6 @@ namespace TeamOn.Domain.Infra.Contexts
     {
         public HumorContext(DbContextOptions<HumorContext> options) : base(options) {  }
         
-        public DbSet<HumorEntity> Humor { get; set; }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<HumorEntity>().Property(x => x.HumorStatus).HasColumnType("integer");
-        }
+        public DbSet<HumorEntity> Humors { get; set; }
     }
 }
