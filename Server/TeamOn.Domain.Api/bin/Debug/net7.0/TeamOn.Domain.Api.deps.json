@@ -14,6 +14,7 @@
           "Microsoft.EntityFrameworkCore.InMemory": "7.0.1",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.1",
           "Swashbuckle.AspNetCore": "6.4.0",
+          "TeamOn.Domain": "1.0.0",
           "TeamOn.Domain.Infra": "1.0.0",
           "supabase-csharp": "0.6.2",
           "System.Reactive.Reference": "4.3.0.0"
