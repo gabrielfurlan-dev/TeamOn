@@ -11,12 +11,15 @@ namespace TeamOn.Domain.Humor.Entities
         public HumorEntity(EHumorStatus humorStatus, string refUser)
         {
             Id = Guid.NewGuid().ToString();
+            SendDate = DateTime.Now;
+
             HumorStatus = humorStatus;
             RefUser = refUser;
         }
 
         [Key]
         public string Id { get; private set; }
+        public DateTime SendDate { get; private set; }
         public EHumorStatus HumorStatus { get; private set; }
         public string RefUser { get; set; }
     }

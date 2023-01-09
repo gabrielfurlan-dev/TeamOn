@@ -7,8 +7,14 @@ namespace TeamOn.Domain.Humor.Commands.Inputs
 {
     public class SendHumorCommand : ICommandContract
     {
+        public SendHumorCommand(EHumorStatus humorStatus, string refUser)
+        {
+            HumorStatus = humorStatus;
+            RefUser = refUser;
+        }
+
         public EHumorStatus HumorStatus { get; private set; }
-        public string RefUser { get; set; }
+        public string RefUser { get; private set; }
 
         public override bool Validate()
         {

@@ -4,6 +4,7 @@ namespace TeamOn.Domain.Humor.Repositories
 {
     public interface IHumorRepository
     {
-         void SendTodaysHumor(HumorEntity humor);
+        IEnumerable<HumorEntity> GetAllByUser(string refUser);
+        void SendTodaysHumor(HumorEntity humor);
     }
 }

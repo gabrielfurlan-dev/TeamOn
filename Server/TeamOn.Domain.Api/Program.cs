@@ -13,6 +13,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddTransient<IHumorRepository,HumorRepository>();
 builder.Services.AddTransient<SendHumorHandler, SendHumorHandler>();
+builder.Services.AddTransient<GetHumorHandler, GetHumorHandler>();
 
 // Descomment this line below and comment the line 21 to use supabase database
 // builder.Services.AddDbContext<HumorContext>(options 

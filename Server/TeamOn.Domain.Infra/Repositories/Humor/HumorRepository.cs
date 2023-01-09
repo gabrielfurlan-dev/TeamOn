@@ -1,4 +1,3 @@
-using TeamOn.Domain.Humor.Commands.Inputs;
 using TeamOn.Domain.Humor.Entities;
 using TeamOn.Domain.Humor.Repositories;
 using TeamOn.Domain.Infra.Contexts;
@@ -11,6 +10,9 @@ namespace TeamOn.Domain.Infra.Repositories.Humor
         
         public HumorRepository(HumorContext dataContext)
             => _dataContext = dataContext;
+
+        public IEnumerable<HumorEntity> GetAllByUser(string refUser)
+        => _dataContext.Humors.Where(x => x.RefUser == refUser).OrderBy(x => x.SendDate);
 
         public void SendTodaysHumor(HumorEntity humor)
         {
