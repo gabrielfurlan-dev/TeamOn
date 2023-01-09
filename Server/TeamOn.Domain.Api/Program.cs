@@ -15,10 +15,10 @@ builder.Services.AddTransient<IHumorRepository,HumorRepository>();
 builder.Services.AddTransient<SendHumorHandler, SendHumorHandler>();
 
 // Descomment this line below and comment the line 21 to use supabase database
-// builder.Services.AddDbContext<HumorContext>(options 
-//     => options.UseNpgsql(builder.Configuration.GetConnectionString("supabase connection string")));
+builder.Services.AddDbContext<HumorContext>(options 
+    => options.UseNpgsql(builder.Configuration.GetConnectionString("")));
 
-builder.Services.AddDbContext<HumorContext>(options => options.UseInMemoryDatabase("Database"));
+// builder.Services.AddDbContext<HumorContext>(options => options.UseInMemoryDatabase("Database"));
 
 var app = builder.Build();
 
