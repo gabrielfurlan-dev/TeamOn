@@ -23,5 +23,5 @@ Todo o protótipo pode ser visto acessando o projeto no [figma](https://www.figm
 
 
  ---
- ###TO-DOs
- [ ] - Criar Migrations do banco de dados
+ ### TO-DOs
+ - [ ] Criar Migrations do banco de dados
