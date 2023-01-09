@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using TeamOn.Domain.Humor.Commands.Handlers;
+using TeamOn.Domain.Humor.Repositories;
 using TeamOn.Domain.Infra.Contexts;
+using TeamOn.Domain.Infra.Repositories.Humor;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,10 +11,16 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var app = builder.Build();
+builder.Services.AddTransient<IHumorRepository,HumorRepository>();
+builder.Services.AddTransient<SendHumorHandler, SendHumorHandler>();
 
-builder.Services.AddDbContext<HumorContext>(options 
-    => options.UseNpgsql(builder.Configuration.GetConnectionString("your connection string here")));
+// Descomment this line below and comment the line 21 to use supabase database
+// builder.Services.AddDbContext<HumorContext>(options 
+//     => options.UseNpgsql(builder.Configuration.GetConnectionString("supabase connection string")));
+
+builder.Services.AddDbContext<HumorContext>(options => options.UseInMemoryDatabase("Database"));
+
+var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -20,3 +20,8 @@ Todo o protótipo pode ser visto acessando o projeto no [figma](https://www.figm
 
 **Front End**
 - Not implemented.
+
+
+ ---
+ ###TO-DOs
+ [ ] - Criar Migrations do banco de dados

@@ -15,6 +15,15 @@
           "lib/netstandard1.3/DotNetEnv.dll": {}
         }
       },
+      "Flunt/2.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Flunt.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Flunt.dll": {}
+        }
+      },
       "functions-csharp/1.2.1": {
         "type": "package",
         "dependencies": {
@@ -103,6 +112,22 @@
         },
         "runtime": {
           "lib/netstandard2.0/_._": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.InMemory/7.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.1"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.EntityFrameworkCore.Relational/7.0.1": {
@@ -1862,6 +1887,34 @@
             "related": ".xml"
           }
         }
+      },
+      "TeamOn.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Flunt": "2.0.5"
+        },
+        "compile": {
+          "bin/placeholder/TeamOn.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TeamOn.Domain.dll": {}
+        }
+      },
+      "TeamOn.Domain.Infra/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.1",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.1",
+          "TeamOn.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TeamOn.Domain.Infra.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TeamOn.Domain.Infra.dll": {}
+        }
       }
     }
   },
@@ -1877,6 +1930,19 @@
         "dotnetenv.2.3.0.nupkg.sha512",
         "dotnetenv.nuspec",
         "lib/netstandard1.3/DotNetEnv.dll"
+      ]
+    },
+    "Flunt/2.0.5": {
+      "sha512": "CMgq8FUYjkHzyZT3PhkUwZyy79mudON+EL4b0SAT7BfIOJ2CNypwnbdA0cPHAM2CYQfO2L8ubNJCiBHQOIv2pA==",
+      "type": "package",
+      "path": "flunt/2.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "flunt.2.0.5.nupkg.sha512",
+        "flunt.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/Flunt.dll"
       ]
     },
     "functions-csharp/1.2.1": {
@@ -1959,6 +2025,20 @@
         "lib/netstandard2.0/_._",
         "microsoft.entityframeworkcore.analyzers.7.0.1.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/7.0.1": {
+      "sha512": "AnIA16TihjWRTdK5uLcPQ6eAxd2x0hv5etXYUkVN9TdkaH2AuhILnDpdAlh6sTIVVDpygqveHl1rFmtvlcZk2w==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.inmemory/7.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.xml",
+        "microsoft.entityframeworkcore.inmemory.7.0.1.nupkg.sha512",
+        "microsoft.entityframeworkcore.inmemory.nuspec"
       ]
     },
     "Microsoft.EntityFrameworkCore.Relational/7.0.1": {
@@ -6115,6 +6195,16 @@
         "websocket.client.4.4.43.nupkg.sha512",
         "websocket.client.nuspec"
       ]
+    },
+    "TeamOn.Domain/1.0.0": {
+      "type": "project",
+      "path": "../TeamOn.Domain/TeamOn.Domain.csproj",
+      "msbuildProject": "../TeamOn.Domain/TeamOn.Domain.csproj"
+    },
+    "TeamOn.Domain.Infra/1.0.0": {
+      "type": "project",
+      "path": "../TeamOn.Domain.Infra/TeamOn.Domain.Infra.csproj",
+      "msbuildProject": "../TeamOn.Domain.Infra/TeamOn.Domain.Infra.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6122,36 +6212,49 @@
       "DotNetEnv >= 2.3.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.1",
       "Microsoft.EntityFrameworkCore >= 7.0.1",
+      "Microsoft.EntityFrameworkCore.InMemory >= 7.0.1",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 7.0.1",
       "Swashbuckle.AspNetCore >= 6.4.0",
+      "TeamOn.Domain.Infra >= 1.0.0",
       "supabase-csharp >= 0.6.2"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\": {}
+    "C:\\Users\\adria\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.Api\\TeamOn.Domain.Api.csproj",
+      "projectUniqueName": "C:\\dev\\TeamOn\\server\\TeamOn.Domain.Api\\TeamOn.Domain.Api.csproj",
       "projectName": "TeamOn.Domain.Api",
-      "projectPath": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.Api\\TeamOn.Domain.Api.csproj",
-      "packagesPath": "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.Api\\obj\\",
+      "projectPath": "C:\\dev\\TeamOn\\server\\TeamOn.Domain.Api\\TeamOn.Domain.Api.csproj",
+      "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
+      "outputPath": "C:\\dev\\TeamOn\\server\\TeamOn.Domain.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Gabriel Furlan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/precisaosistemas/_packaging/InovaPay/nuget/v3/index.json": {},
+        "https://pkgs.dev.azure.com/precisaosistemas/_packaging/RecargaPS/nuget/v3/index.json": {},
+        "https://precisaosistemas.pkgs.visualstudio.com/_packaging/Bluedesk/nuget/v3/index.json": {},
+        "https://precisaosistemas.pkgs.visualstudio.com/_packaging/Inovafarma/nuget/v3/index.json": {},
+        "https://precisaosistemas.pkgs.visualstudio.com/_packaging/Precisao/nuget/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\dev\\TeamOn\\server\\TeamOn.Domain.Infra\\TeamOn.Domain.Infra.csproj": {
+              "projectPath": "C:\\dev\\TeamOn\\server\\TeamOn.Domain.Infra\\TeamOn.Domain.Infra.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -6173,6 +6276,10 @@
             "version": "[7.0.1, )"
           },
           "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[7.0.1, )"
+          },
+          "Microsoft.EntityFrameworkCore.InMemory": {
             "target": "Package",
             "version": "[7.0.1, )"
           },
@@ -6208,7 +6315,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

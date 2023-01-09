@@ -8,14 +8,16 @@ namespace TeamOn.Domain.Humor.Entities
     [Table("Humor")]
     public class HumorEntity : Entity
     {
-        public HumorEntity(EHumorStatus humorStatus)
+        public HumorEntity(EHumorStatus humorStatus, string refUser)
         {
             Id = Guid.NewGuid().ToString();
             HumorStatus = humorStatus;
+            RefUser = refUser;
         }
 
         [Key]
         public string Id { get; private set; }
         public EHumorStatus HumorStatus { get; private set; }
+        public string RefUser { get; set; }
     }
 }

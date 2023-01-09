@@ -1,5 +1,6 @@
 using TeamOn.Domain.Contracts.Commands;
 using TeamOn.Domain.Humor.Commands.Inputs;
+using TeamOn.Domain.Humor.Entities;
 using TeamOn.Domain.Humor.Repositories;
 
 namespace TeamOn.Domain.Humor.Commands.Handlers
@@ -18,7 +19,8 @@ namespace TeamOn.Domain.Humor.Commands.Handlers
 
             try
             {
-                _repository.SendTodaysHumor(command.Humor, command.UserRef);
+                var humor = new HumorEntity(command.HumorStatus, command.RefUser);
+                _repository.SendTodaysHumor(humor);
 
                 return new GenericCommandResult(null, true, "Humor enviado.");
             }

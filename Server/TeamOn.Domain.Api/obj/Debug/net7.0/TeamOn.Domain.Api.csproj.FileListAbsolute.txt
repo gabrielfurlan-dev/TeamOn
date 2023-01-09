@@ -47,3 +47,12 @@ C:\dev\TeamOn\Server\TeamOn.Domain.Api\bin\Debug\net7.0\System.Reactive.dll
 C:\dev\TeamOn\Server\TeamOn.Domain.Api\bin\Debug\net7.0\System.Reactive.xml
 C:\dev\TeamOn\Server\TeamOn.Domain.Api\bin\Debug\net7.0\DotNetEnv.dll
 C:\dev\TeamOn\Server\TeamOn.Domain.Api\bin\Debug\net7.0\Sprache.dll
+C:\dev\TeamOn\Server\TeamOn.Domain.Api\bin\Debug\net7.0\Flunt.dll
+C:\dev\TeamOn\Server\TeamOn.Domain.Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\dev\TeamOn\Server\TeamOn.Domain.Api\bin\Debug\net7.0\Npgsql.dll
+C:\dev\TeamOn\Server\TeamOn.Domain.Api\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\dev\TeamOn\Server\TeamOn.Domain.Api\bin\Debug\net7.0\TeamOn.Domain.dll
+C:\dev\TeamOn\Server\TeamOn.Domain.Api\bin\Debug\net7.0\TeamOn.Domain.Infra.dll
+C:\dev\TeamOn\Server\TeamOn.Domain.Api\bin\Debug\net7.0\TeamOn.Domain.Infra.pdb
+C:\dev\TeamOn\Server\TeamOn.Domain.Api\bin\Debug\net7.0\TeamOn.Domain.pdb
+C:\dev\TeamOn\server\TeamOn.Domain.Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.InMemory.dll

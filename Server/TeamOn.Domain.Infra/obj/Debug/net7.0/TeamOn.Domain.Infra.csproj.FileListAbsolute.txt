@@ -10,3 +10,8 @@ C:\dev\TeamOn\Server\TeamOn.Domain.Infra\obj\Debug\net7.0\TeamOn.Domain.Infra.dl
 C:\dev\TeamOn\Server\TeamOn.Domain.Infra\obj\Debug\net7.0\refint\TeamOn.Domain.Infra.dll
 C:\dev\TeamOn\Server\TeamOn.Domain.Infra\obj\Debug\net7.0\TeamOn.Domain.Infra.pdb
 C:\dev\TeamOn\Server\TeamOn.Domain.Infra\obj\Debug\net7.0\ref\TeamOn.Domain.Infra.dll
+C:\dev\TeamOn\Server\TeamOn.Domain.Infra\bin\Debug\net7.0\TeamOn.Domain.Infra.runtimeconfig.json
+C:\dev\TeamOn\Server\TeamOn.Domain.Infra\bin\Debug\net7.0\TeamOn.Domain.dll
+C:\dev\TeamOn\Server\TeamOn.Domain.Infra\bin\Debug\net7.0\TeamOn.Domain.pdb
+C:\dev\TeamOn\Server\TeamOn.Domain.Infra\obj\Debug\net7.0\TeamOn.Domain.Infra.csproj.CopyComplete
+C:\dev\TeamOn\Server\TeamOn.Domain.Infra\obj\Debug\net7.0\TeamOn.Domain.Infra.genruntimeconfig.cache
