@@ -1905,6 +1905,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "DotNetEnv": "2.3.0",
           "Microsoft.EntityFrameworkCore": "7.0.1",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.1",
           "TeamOn.Domain": "1.0.0"
@@ -6220,39 +6221,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\adria\\.nuget\\packages\\": {}
+    "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\TeamOn\\server\\TeamOn.Domain.Api\\TeamOn.Domain.Api.csproj",
+      "projectUniqueName": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.Api\\TeamOn.Domain.Api.csproj",
       "projectName": "TeamOn.Domain.Api",
-      "projectPath": "C:\\dev\\TeamOn\\server\\TeamOn.Domain.Api\\TeamOn.Domain.Api.csproj",
-      "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\TeamOn\\server\\TeamOn.Domain.Api\\obj\\",
+      "projectPath": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.Api\\TeamOn.Domain.Api.csproj",
+      "packagesPath": "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\",
+      "outputPath": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Gabriel Furlan\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://pkgs.dev.azure.com/precisaosistemas/_packaging/InovaPay/nuget/v3/index.json": {},
-        "https://pkgs.dev.azure.com/precisaosistemas/_packaging/RecargaPS/nuget/v3/index.json": {},
-        "https://precisaosistemas.pkgs.visualstudio.com/_packaging/Bluedesk/nuget/v3/index.json": {},
-        "https://precisaosistemas.pkgs.visualstudio.com/_packaging/Inovafarma/nuget/v3/index.json": {},
-        "https://precisaosistemas.pkgs.visualstudio.com/_packaging/Precisao/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\dev\\TeamOn\\server\\TeamOn.Domain.Infra\\TeamOn.Domain.Infra.csproj": {
-              "projectPath": "C:\\dev\\TeamOn\\server\\TeamOn.Domain.Infra\\TeamOn.Domain.Infra.csproj"
+            "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.Infra\\TeamOn.Domain.Infra.csproj": {
+              "projectPath": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.Infra\\TeamOn.Domain.Infra.csproj"
             }
           }
         }
@@ -6315,7 +6309,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
