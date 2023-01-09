@@ -1,4 +1,3 @@
-using TeamOn.Domain.Contracts.Commands;
 using TeamOn.Domain.Humor.Entities;
 using TeamOn.Domain.Humor.Repositories;
 using TeamOn.Domain.Infra.Contexts;

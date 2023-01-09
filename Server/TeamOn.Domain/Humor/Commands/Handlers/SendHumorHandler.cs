@@ -18,9 +18,9 @@ namespace TeamOn.Domain.Humor.Commands.Handlers
 
             try
             {
-                var result = _repository.SendTodaysHumor(command.Humor, command.UserRef);
+                _repository.SendTodaysHumor(command.Humor, command.UserRef);
 
-                return new GenericCommandResult(result, true, "Humor enviado.");
+                return new GenericCommandResult(null, true, "Humor enviado.");
             }
             catch (System.Exception)
             {

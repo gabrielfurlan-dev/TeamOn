@@ -10,6 +10,9 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+// builder.Services.AddDbContext<Context>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("Connection")));
+
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
