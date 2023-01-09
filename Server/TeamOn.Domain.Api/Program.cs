@@ -4,6 +4,8 @@ using TeamOn.Domain.Humor.Repositories;
 using TeamOn.Domain.Infra.Contexts;
 using TeamOn.Domain.Infra.Repositories.Humor;
 
+DotNetEnv.Env.Load();
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -16,7 +18,7 @@ builder.Services.AddTransient<SendHumorHandler, SendHumorHandler>();
 
 // Descomment this line below and comment the line 21 to use supabase database
 builder.Services.AddDbContext<HumorContext>(options 
-    => options.UseNpgsql(builder.Configuration.GetConnectionString("")));
+    => options.UseNpgsql(builder.Configuration.GetConnectionString(System.Environment.GetEnvironmentVariable("SUPABASE_CONNECTION_STRING"))));
 
 // builder.Services.AddDbContext<HumorContext>(options => options.UseInMemoryDatabase("Database"));
 

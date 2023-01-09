@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.api\\TeamOn.Domain.Api.csproj": {}
+    "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.Api\\TeamOn.Domain.Api.csproj": {}
   },
   "projects": {
-    "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.api\\TeamOn.Domain.Api.csproj": {
+    "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.Api\\TeamOn.Domain.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.api\\TeamOn.Domain.Api.csproj",
+        "projectUniqueName": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.Api\\TeamOn.Domain.Api.csproj",
         "projectName": "TeamOn.Domain.Api",
-        "projectPath": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.api\\TeamOn.Domain.Api.csproj",
+        "projectPath": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.Api\\TeamOn.Domain.Api.csproj",
         "packagesPath": "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.api\\obj\\",
+        "outputPath": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gabriel Furlan\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -132,6 +132,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "DotNetEnv": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.1, )"

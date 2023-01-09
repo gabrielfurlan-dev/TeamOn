@@ -1905,6 +1905,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "DotNetEnv": "2.3.0",
           "Microsoft.EntityFrameworkCore": "7.0.1",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.1",
           "TeamOn.Domain": "1.0.0"

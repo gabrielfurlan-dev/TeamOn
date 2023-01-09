@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SP8MkT5r9WEmjNwtNmLDGZG21GJEpOcpX1+9QCvyGYQQaNzse455eiJbEHyLsWBNn4tCSCnRA2Pnru3nUAQ1Bw==",
+  "dgSpecHash": "uazsW/Z77MbQl1zTZVOGfNP4WrmprfEUJ/6XtLJdc2Pf8d9mg1idB2jZ/PKUsJFM25S8mdvhy0kWW0S8/j1KWg==",
   "success": true,
-  "projectFilePath": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.api\\TeamOn.Domain.Api.csproj",
+  "projectFilePath": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.Api\\TeamOn.Domain.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\dotnetenv\\2.3.0\\dotnetenv.2.3.0.nupkg.sha512",
     "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512",
