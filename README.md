@@ -1,4 +1,4 @@
-#Team on
+# Team on
 
 Uma plataforma para colaboradores de corporações com recursos e funcionalidades úteis tanto para os colaboradores quanto aos gestores.
 
@@ -11,7 +11,7 @@ Uma plataforma para colaboradores de corporações com recursos e funcionalidade
 Todo o protótipo pode ser visto acessando o projeto no [figma](https://www.figma.com/file/b01bc5mS5rKDbuUKnWQUm7/TeamOn?node-id=409%3A1025&t=xgbi6S2OqCMLrh6a-1).
  
  ---
-###Tecnologias utilizadas
+### Tecnologias utilizadas
 
 **BackEnd**
 - Linguagens: C# 11 (.NET 7.0.101)
