@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "IPFcAvS9404JfDqS3NuRkL+V5v14T2Lbrut9dZDWUe7vtFADAp1YxIQTIpVq+XZeYUGsx5OhwQ4eWncd+oufAQ==",
+  "dgSpecHash": "4Q0SI8UAeb+K+9SfNy1F97SNapQlYnnEjrnvF+wudehr8++qMfD6cNAxoyu21nm6fHzNVh/EbCaxcR+kY38SGQ==",
   "success": true,
   "projectFilePath": "C:\\dev\\TeamOn\\server\\TeamOn.Domain.Api\\TeamOn.Domain.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adria\\.nuget\\packages\\dotnetenv\\2.3.0\\dotnetenv.2.3.0.nupkg.sha512",
+    "C:\\Users\\adria\\.nuget\\packages\\enums.net\\4.0.1\\enums.net.4.0.1.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\functions-csharp\\1.2.1\\functions-csharp.1.2.1.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\gotrue-csharp\\3.0.3\\gotrue-csharp.3.0.3.nupkg.sha512",

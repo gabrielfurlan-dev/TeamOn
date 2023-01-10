@@ -438,6 +438,15 @@
           }
         }
       },
+      "PgsqlDataTypes/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/PgsqlDataTypes.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/PgsqlDataTypes.dll": {}
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -2310,6 +2319,18 @@
         "npgsql.entityframeworkcore.postgresql.7.0.1.nupkg.sha512",
         "npgsql.entityframeworkcore.postgresql.nuspec",
         "postgresql.png"
+      ]
+    },
+    "PgsqlDataTypes/1.0.0": {
+      "sha512": "bzru6aV8zR9AE8xlaCs0dqENA5STGZxOSbcadfMVpQaMOHPw6c+YaNJtCR6ePEIzYKJ9v9QcQS5WK6Puy7nY7g==",
+      "type": "package",
+      "path": "pgsqldatatypes/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net5.0/PgsqlDataTypes.dll",
+        "pgsqldatatypes.1.0.0.nupkg.sha512",
+        "pgsqldatatypes.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -5674,6 +5695,7 @@
       "Microsoft.EntityFrameworkCore >= 7.0.1",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.1",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 7.0.1",
+      "PgsqlDataTypes >= 1.0.0",
       "TeamOn.Domain >= 1.0.0"
     ]
   },
@@ -5742,6 +5764,10 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",
             "version": "[7.0.1, )"
+          },
+          "PgsqlDataTypes": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           }
         },
         "imports": [

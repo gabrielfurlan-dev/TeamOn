@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nV9R8bEGij7uW0uaZ/VtE+Ng5czRVe1uj70dSJDgwYN763DaOr49trjdvKe9Efrqr9wAxi3bYRBYk8igyYLffQ==",
+  "dgSpecHash": "S2cppSmcwvkrRAELZ39kK3bDrr9lt4cQQ6mHJiHptrIof/8hvS3Nh/pk/0VCHrUWEFord4enJeGtn4w2zRkoAg==",
   "success": true,
   "projectFilePath": "C:\\dev\\TeamOn\\server\\TeamOn.Domain.Infra\\TeamOn.Domain.Infra.csproj",
   "expectedPackageFiles": [
@@ -29,6 +29,7 @@
     "C:\\Users\\adria\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\npgsql\\7.0.1\\npgsql.7.0.1.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.1\\npgsql.entityframeworkcore.postgresql.7.0.1.nupkg.sha512",
+    "C:\\Users\\adria\\.nuget\\packages\\pgsqldatatypes\\1.0.0\\pgsqldatatypes.1.0.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\adria\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
