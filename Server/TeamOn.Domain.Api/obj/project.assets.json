@@ -15,19 +15,6 @@
           "lib/netstandard1.3/DotNetEnv.dll": {}
         }
       },
-      "Enums.NET/4.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/netcoreapp3.0/Enums.NET.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netcoreapp3.0/Enums.NET.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Flunt/2.0.5": {
         "type": "package",
         "compile": {
@@ -493,6 +480,15 @@
           "lib/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "PgsqlDataTypes/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/PgsqlDataTypes.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/PgsqlDataTypes.dll": {}
         }
       },
       "postgrest-csharp/3.0.4": {
@@ -1921,6 +1917,7 @@
           "DotNetEnv": "2.3.0",
           "Microsoft.EntityFrameworkCore": "7.0.1",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.1",
+          "PgsqlDataTypes": "1.0.0",
           "TeamOn.Domain": "1.0.0"
         },
         "compile": {
@@ -1944,38 +1941,6 @@
         "dotnetenv.2.3.0.nupkg.sha512",
         "dotnetenv.nuspec",
         "lib/netstandard1.3/DotNetEnv.dll"
-      ]
-    },
-    "Enums.NET/4.0.1": {
-      "sha512": "OUGCd5L8zHZ61GAf436G0gf/H6yrSUkEpV5vm2CbCUuz9Rx7iLFLP5iHSSfmOtqNpuyo4vYte0CvYEmPZXRmRQ==",
-      "type": "package",
-      "path": "enums.net/4.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "enums.net.4.0.1.nupkg.sha512",
-        "enums.net.nuspec",
-        "lib/net45/Enums.NET.dll",
-        "lib/net45/Enums.NET.pdb",
-        "lib/net45/Enums.NET.xml",
-        "lib/netcoreapp3.0/Enums.NET.dll",
-        "lib/netcoreapp3.0/Enums.NET.pdb",
-        "lib/netcoreapp3.0/Enums.NET.xml",
-        "lib/netstandard1.0/Enums.NET.dll",
-        "lib/netstandard1.0/Enums.NET.pdb",
-        "lib/netstandard1.0/Enums.NET.xml",
-        "lib/netstandard1.1/Enums.NET.dll",
-        "lib/netstandard1.1/Enums.NET.pdb",
-        "lib/netstandard1.1/Enums.NET.xml",
-        "lib/netstandard1.3/Enums.NET.dll",
-        "lib/netstandard1.3/Enums.NET.pdb",
-        "lib/netstandard1.3/Enums.NET.xml",
-        "lib/netstandard2.0/Enums.NET.dll",
-        "lib/netstandard2.0/Enums.NET.pdb",
-        "lib/netstandard2.0/Enums.NET.xml",
-        "lib/netstandard2.1/Enums.NET.dll",
-        "lib/netstandard2.1/Enums.NET.pdb",
-        "lib/netstandard2.1/Enums.NET.xml"
       ]
     },
     "Flunt/2.0.5": {
@@ -2805,6 +2770,18 @@
         "npgsql.entityframeworkcore.postgresql.7.0.1.nupkg.sha512",
         "npgsql.entityframeworkcore.postgresql.nuspec",
         "postgresql.png"
+      ]
+    },
+    "PgsqlDataTypes/1.0.0": {
+      "sha512": "bzru6aV8zR9AE8xlaCs0dqENA5STGZxOSbcadfMVpQaMOHPw6c+YaNJtCR6ePEIzYKJ9v9QcQS5WK6Puy7nY7g==",
+      "type": "package",
+      "path": "pgsqldatatypes/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net5.0/PgsqlDataTypes.dll",
+        "pgsqldatatypes.1.0.0.nupkg.sha512",
+        "pgsqldatatypes.nuspec"
       ]
     },
     "postgrest-csharp/3.0.4": {
@@ -6256,7 +6233,6 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "DotNetEnv >= 2.3.0",
-      "Enums.NET >= 4.0.1",
       "Microsoft.AspNetCore.OpenApi >= 7.0.1",
       "Microsoft.EntityFrameworkCore >= 7.0.1",
       "Microsoft.EntityFrameworkCore.InMemory >= 7.0.1",
@@ -6268,7 +6244,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\adria\\.nuget\\packages\\": {}
+    "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -6276,24 +6252,17 @@
       "projectUniqueName": "C:\\dev\\TeamOn\\server\\TeamOn.Domain.Api\\TeamOn.Domain.Api.csproj",
       "projectName": "TeamOn.Domain.Api",
       "projectPath": "C:\\dev\\TeamOn\\server\\TeamOn.Domain.Api\\TeamOn.Domain.Api.csproj",
-      "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\",
       "outputPath": "C:\\dev\\TeamOn\\server\\TeamOn.Domain.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Gabriel Furlan\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://pkgs.dev.azure.com/precisaosistemas/_packaging/InovaPay/nuget/v3/index.json": {},
-        "https://pkgs.dev.azure.com/precisaosistemas/_packaging/RecargaPS/nuget/v3/index.json": {},
-        "https://precisaosistemas.pkgs.visualstudio.com/_packaging/Bluedesk/nuget/v3/index.json": {},
-        "https://precisaosistemas.pkgs.visualstudio.com/_packaging/Inovafarma/nuget/v3/index.json": {},
-        "https://precisaosistemas.pkgs.visualstudio.com/_packaging/Precisao/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
@@ -6321,10 +6290,6 @@
           "DotNetEnv": {
             "target": "Package",
             "version": "[2.3.0, )"
-          },
-          "Enums.NET": {
-            "target": "Package",
-            "version": "[4.0.1, )"
           },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
@@ -6370,7 +6335,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

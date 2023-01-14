@@ -56,3 +56,4 @@ C:\dev\TeamOn\Server\TeamOn.Domain.Api\bin\Debug\net7.0\TeamOn.Domain.Infra.dll
 C:\dev\TeamOn\Server\TeamOn.Domain.Api\bin\Debug\net7.0\TeamOn.Domain.Infra.pdb
 C:\dev\TeamOn\Server\TeamOn.Domain.Api\bin\Debug\net7.0\TeamOn.Domain.pdb
 C:\dev\TeamOn\server\TeamOn.Domain.Api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\dev\TeamOn\server\TeamOn.Domain.Api\bin\Debug\net7.0\PgsqlDataTypes.dll
