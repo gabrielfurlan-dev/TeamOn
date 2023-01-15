@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using TeamOn.Domain.Contracts.Commands;
-using TeamOn.Domain.Humor.Commands.Handlers;
-using TeamOn.Domain.Humor.Commands.Inputs;
-using TeamOn.Domain.Humor.Entities;
+using TeamOn.Domain.Humors.Commands.Handlers;
+using TeamOn.Domain.Humors.Commands.Inputs;
+using TeamOn.Domain.Humors.Entities;
 
 namespace TeamOn.Domain.Api.Controllers;
 

@@ -1,8 +1,8 @@
 using System.Windows.Input;
-using TeamOn.Domain.Humor.Entities;
-using TeamOn.Domain.Humor.Repositories;
+using TeamOn.Domain.Humors.Entities;
+using TeamOn.Domain.Humors.Repositories;
 
-namespace TeamOn.Domain.Humor.Commands.Handlers
+namespace TeamOn.Domain.Humors.Commands.Handlers
 {
     public class GetHumorHandler
     {

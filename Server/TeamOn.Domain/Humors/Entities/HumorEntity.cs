@@ -1,9 +1,9 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using TeamOn.Domain.Contracts;
-using TeamOn.Domain.Humor.Enums;
+using TeamOn.Domain.Humors.Enums;
 
-namespace TeamOn.Domain.Humor.Entities
+namespace TeamOn.Domain.Humors.Entities
 {
     [Table("Humor")]
     public class HumorEntity : Entity

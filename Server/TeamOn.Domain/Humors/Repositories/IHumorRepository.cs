@@ -1,6 +1,6 @@
-using TeamOn.Domain.Humor.Entities;
+using TeamOn.Domain.Humors.Entities;
 
-namespace TeamOn.Domain.Humor.Repositories
+namespace TeamOn.Domain.Humors.Repositories
 {
     public interface IHumorRepository
     {

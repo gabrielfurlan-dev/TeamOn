@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using TeamOn.Domain.Humor.Entities;
+using TeamOn.Domain.Humors.Entities;
 
 namespace TeamOn.Domain.Infra.Contexts
 {

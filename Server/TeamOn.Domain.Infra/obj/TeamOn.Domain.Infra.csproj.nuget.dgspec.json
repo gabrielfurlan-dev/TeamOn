@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\TeamOn\\server\\TeamOn.Domain.Infra\\TeamOn.Domain.Infra.csproj": {}
+    "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.Infra\\TeamOn.Domain.Infra.csproj": {}
   },
   "projects": {
-    "C:\\dev\\TeamOn\\server\\TeamOn.Domain.Infra\\TeamOn.Domain.Infra.csproj": {
+    "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.Infra\\TeamOn.Domain.Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\TeamOn\\server\\TeamOn.Domain.Infra\\TeamOn.Domain.Infra.csproj",
+        "projectUniqueName": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.Infra\\TeamOn.Domain.Infra.csproj",
         "projectName": "TeamOn.Domain.Infra",
-        "projectPath": "C:\\dev\\TeamOn\\server\\TeamOn.Domain.Infra\\TeamOn.Domain.Infra.csproj",
+        "projectPath": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.Infra\\TeamOn.Domain.Infra.csproj",
         "packagesPath": "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\TeamOn\\server\\TeamOn.Domain.Infra\\obj\\",
+        "outputPath": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.Infra\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gabriel Furlan\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\dev\\TeamOn\\server\\TeamOn.Domain\\TeamOn.Domain.csproj": {
-                "projectPath": "C:\\dev\\TeamOn\\server\\TeamOn.Domain\\TeamOn.Domain.csproj"
+              "C:\\dev\\TeamOn\\Server\\TeamOn.Domain\\TeamOn.Domain.csproj": {
+                "projectPath": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain\\TeamOn.Domain.csproj"
               }
             }
           }
@@ -85,14 +85,14 @@
         }
       }
     },
-    "C:\\dev\\TeamOn\\server\\TeamOn.Domain\\TeamOn.Domain.csproj": {
+    "C:\\dev\\TeamOn\\Server\\TeamOn.Domain\\TeamOn.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\TeamOn\\server\\TeamOn.Domain\\TeamOn.Domain.csproj",
+        "projectUniqueName": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain\\TeamOn.Domain.csproj",
         "projectName": "TeamOn.Domain",
-        "projectPath": "C:\\dev\\TeamOn\\server\\TeamOn.Domain\\TeamOn.Domain.csproj",
+        "projectPath": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain\\TeamOn.Domain.csproj",
         "packagesPath": "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\TeamOn\\server\\TeamOn.Domain\\obj\\",
+        "outputPath": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gabriel Furlan\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,5 +1,5 @@
-using TeamOn.Domain.Humor.Entities;
-using TeamOn.Domain.Humor.Repositories;
+using TeamOn.Domain.Humors.Entities;
+using TeamOn.Domain.Humors.Repositories;
 using TeamOn.Domain.Infra.Contexts;
 
 namespace TeamOn.Domain.Infra.Repositories.Humor

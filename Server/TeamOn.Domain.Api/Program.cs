@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using TeamOn.Domain.Humor.Commands.Handlers;
-using TeamOn.Domain.Humor.Repositories;
+using TeamOn.Domain.Humors.Commands.Handlers;
+using TeamOn.Domain.Humors.Repositories;
 using TeamOn.Domain.Infra.Contexts;
 using TeamOn.Domain.Infra.Repositories.Humor;
 

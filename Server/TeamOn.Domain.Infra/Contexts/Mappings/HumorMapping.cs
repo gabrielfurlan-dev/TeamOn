@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PgsqlDataTypes;
-using TeamOn.Domain.Humor.Entities;
+using TeamOn.Domain.Humors.Entities;
 
 namespace TeamOn.Domain.Infra.Contexts.Mappings
 {

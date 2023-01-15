@@ -1,9 +1,9 @@
 using Flunt.Notifications;
 using Flunt.Validations;
 using TeamOn.Domain.Contracts.Commands;
-using TeamOn.Domain.Humor.Enums;
+using TeamOn.Domain.Humors.Enums;
 
-namespace TeamOn.Domain.Humor.Commands.Inputs
+namespace TeamOn.Domain.Humors.Commands.Inputs
 {
     public class SendHumorCommand : ICommandContract
     {

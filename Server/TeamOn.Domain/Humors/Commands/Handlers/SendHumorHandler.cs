@@ -1,9 +1,9 @@
 using TeamOn.Domain.Contracts.Commands;
-using TeamOn.Domain.Humor.Commands.Inputs;
-using TeamOn.Domain.Humor.Entities;
-using TeamOn.Domain.Humor.Repositories;
+using TeamOn.Domain.Humors.Commands.Inputs;
+using TeamOn.Domain.Humors.Entities;
+using TeamOn.Domain.Humors.Repositories;
 
-namespace TeamOn.Domain.Humor.Commands.Handlers
+namespace TeamOn.Domain.Humors.Commands.Handlers
 {
     public class SendHumorHandler : IHandler<SendHumorCommand>
     {

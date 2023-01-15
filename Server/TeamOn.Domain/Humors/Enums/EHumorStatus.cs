@@ -1,4 +1,4 @@
-namespace TeamOn.Domain.Humor.Enums
+namespace TeamOn.Domain.Humors.Enums
 {
     public enum EHumorStatus
     {
