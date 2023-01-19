@@ -19,9 +19,11 @@ Todo o protótipo pode ser visto acessando o projeto no [figma](https://www.figm
 - Banco de dados: Supabase (Postgres)
 
 **Front End**
-- Not implemented.
-
+- Linguagens: TypeScript
+- Build Tool: Vite
+- Frameworks:
+    - React
+    - Tailwind CSS
+    - Radix (breve)
 
  ---
- ### TO-DOs
- - [ ] Criar Migrations do banco de dados
