@@ -1,7 +1,10 @@
+
 import sadFace from "../../assets/images/humorFaces/sad-face.svg"
 
-import PrincipalButton from "../../components/Buttons/PrincipalButton/PrincipalButton"
+import { Check } from "phosphor-react";
 
+import PrincipalButton from "../../components/Buttons/PrincipalButton/PrincipalButton"
+import CheckBox from "../../components/CheckBox/CheckBox";
 
 function SendHumor() {
     return (
@@ -10,9 +13,13 @@ function SendHumor() {
                 Humor
             </h1>
 
-            <PrincipalButton title="Enviar">
-                
-            </PrincipalButton>
+            <div>
+                <PrincipalButton title="Enviar" />
+                <div>
+                    <CheckBox title={"Enviar Comentário"} />
+                </div>
+
+            </div>
         </div>
     )
 }
