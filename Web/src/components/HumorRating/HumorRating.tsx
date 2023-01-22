@@ -15,24 +15,24 @@ const HumorRating: React.FC<HumorRatingProps> = ({humorStatus, setHumorStatus}) 
     
     return (
         <div className="flex">
-            <button onClick={() => setHumorStatus(EHumorStatus.Happy)}>
-                <HappyFace humor={humorStatus} />
-            </button>
-
-            <button onClick={() => setHumorStatus(EHumorStatus.HalfHappy)}>
-                <HalfHappyFace humor={humorStatus} />
-            </button>
-
-            <button onClick={() => setHumorStatus(EHumorStatus.Emotionless)}>
-                <EmotionlessFace humor={humorStatus} />
+            <button onClick={() => setHumorStatus(EHumorStatus.Sad)}>
+                <SadFace humor={humorStatus} />
             </button>
 
             <button onClick={() => setHumorStatus(EHumorStatus.HalfSad)}>
                 <HalfSadFace humor={humorStatus} />
             </button>
 
-            <button onClick={() => setHumorStatus(EHumorStatus.Sad)}>
-                <SadFace humor={humorStatus} />
+            <button onClick={() => setHumorStatus(EHumorStatus.Emotionless)}>
+                <EmotionlessFace humor={humorStatus} />
+            </button>
+
+            <button onClick={() => setHumorStatus(EHumorStatus.HalfHappy)}>
+                <HalfHappyFace humor={humorStatus} />
+            </button>
+
+            <button onClick={() => setHumorStatus(EHumorStatus.Happy)}>
+                <HappyFace humor={humorStatus} />
             </button>
         </div>
     );

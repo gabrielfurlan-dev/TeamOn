@@ -6,9 +6,12 @@ import './styles.css';
 
 interface checkboxProps {
   title: string;
+  checked: boolean,
+  setChecked: React.Dispatch<React.SetStateAction<boolean>>
+
 }
 
-const CheckboxDemo: React.FC<checkboxProps> = ({ title }) => (
+const CheckboxDemo: React.FC<checkboxProps> = ({ title, checked, setChecked }) => (
 
   <form>
     <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -27,7 +30,12 @@ const CheckboxDemo: React.FC<checkboxProps> = ({ title }) => (
         id="c1">
 
         <Checkbox.Indicator className="CheckboxIndicator">
-          <Check  className="text-GRAY m-auto" weight='bold' size={19}/>
+          <Check
+            className="text-GRAY m-auto"
+            weight='bold'
+            size={19}
+            onChange={() => setChecked(!checked)}
+          />
         </Checkbox.Indicator>
 
       </Checkbox.Root>
