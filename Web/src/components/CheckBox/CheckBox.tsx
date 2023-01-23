@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import * as Checkbox from '@radix-ui/react-checkbox';
 // import { CheckIcon } from '@radix-ui/react-icons';
 import { Check } from 'phosphor-react';
@@ -7,16 +7,18 @@ import './styles.css';
 interface checkboxProps {
   title: string;
   checked: boolean,
-  setChecked: React.Dispatch<React.SetStateAction<boolean>>
-
+  setChecked: VoidFunction
 }
 
-const CheckboxDemo: React.FC<checkboxProps> = ({ title, checked, setChecked }) => (
+const CheckboxDemo: React.FC<checkboxProps> = ({ title, checked, setChecked }) => {
 
-  <form>
-    <div style={{ display: 'flex', alignItems: 'center' }}>
+  console.log(checked);
 
-      <Checkbox.Root className="w-6
+  return (
+    <form>
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+
+        <Checkbox.Root className="w-6
                                 h-6
                                 rounded-full
                                 d-flex
@@ -27,23 +29,23 @@ const CheckboxDemo: React.FC<checkboxProps> = ({ title, checked, setChecked }) =
                                 hover:bg-sky-100
                                 focus:outline-none
                                 focus:ring"
-        id="c1">
+          id="c1">
 
-        <Checkbox.Indicator className="CheckboxIndicator">
-          <Check
-            className="text-GRAY m-auto"
-            weight='bold'
-            size={19}
-            onChange={() => setChecked(!checked)}
-          />
-        </Checkbox.Indicator>
+          <Checkbox.Indicator className="CheckboxIndicator" defaultChecked={checked}>
+            <Check
+              className="text-GRAY m-auto"
+              weight='bold'
+              size={19}
+              onChange={() => setChecked()}
+            />
+          </Checkbox.Indicator>
 
-      </Checkbox.Root>
+        </Checkbox.Root>
 
-      <label className="Label text-GRAY " htmlFor="c1">{title}</label>
+        <label className="Label text-GRAY " htmlFor="c1">{title}</label>
 
-    </div>
-  </form>
-);
-
-export default CheckboxDemo;
+      </div>
+    </form>
+  );
+}
+export default memo(CheckboxDemo);
