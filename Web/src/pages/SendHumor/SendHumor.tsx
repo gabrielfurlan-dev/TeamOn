@@ -2,17 +2,22 @@ import PrincipalButton from "../../components/Buttons/PrincipalButton/PrincipalB
 import CheckBox from "../../components/CheckBox/CheckBox";
 
 import { EHumorStatus } from "../../enums/EHumorStatus";
-import { useCallback, useState } from "react";
+import { useState } from "react";
 import HumorRating from "../../components/HumorRating/HumorRating";
+
+type CheckboxProps = {
+    checked: boolean;
+    onChange: (checked: boolean) => void;
+};
 
 function SendHumor() {
     const [humorStatus, setHumorStatus] = useState(EHumorStatus.Emotionless)
-    const [comment, setComment] = useState(String)
-    const [SendComment, setSendComment] = useState(true)
 
-    const teste = useCallback(() => {
-        setSendComment(!SendComment);
-    }, [SendComment])
+    const [checked, setChecked] = useState(false);
+
+    const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setChecked(event.target.checked);
+    };
 
     return (
         <div>
@@ -30,14 +35,15 @@ function SendHumor() {
 
                 <CheckBox
                     title={"Enviar Comentário"}
-                    checked={SendComment}
-                    setChecked={teste}
+                    checked={checked}
+                    setChecked={setChecked}
                 />
 
-            </div>
-            
-            <textarea className="bg-LIGHT_GRAY" hidden={SendComment} />
+                {checked && (
+                    <textarea className="bg-LIGHT_GRAY" cols={30} rows={5} placeholder="Informe aqui sua mensagem..." />
+                )}
 
+            </div>
         </div>
     )
 }
