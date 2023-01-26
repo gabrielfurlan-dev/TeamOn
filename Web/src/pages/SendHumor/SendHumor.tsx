@@ -1,12 +1,20 @@
 import PrincipalButton from "../../components/Buttons/PrincipalButton/PrincipalButton"
 import CheckBox from "../../components/CheckBox/CheckBox";
 import { EHumorStatus } from "../../enums/EHumorStatus";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import HumorRating from "../../components/HumorRating/HumorRating";
+import api from '../../lib/axios'
 
-function SendHumor() {
+function SendHumor(){
+    // api.post('/humors')
+}
+
+function SendHumorComponent() {
     const [humorStatus, setHumorStatus] = useState(EHumorStatus.Emotionless)
     const [sendComment, setSendComment] = useState(false);
+    useEffect(() => {
+        // api.get('/humors')
+    }, [])
 
     return (
         <div className=" m-2 flex flex-col items-center ">
@@ -27,7 +35,20 @@ function SendHumor() {
                     />
                 </div>
 
-                <PrincipalButton title="Enviar"/>
+                <button
+                    type="button"
+                    className="bg-LIGHT_BLUE 
+                            p-2 
+                            text-base
+                            font-semibold
+                          text-WHITE
+                            rounded-lg
+                            w-24 h-8
+                            text-center"
+                    onClick={SendHumor}
+                >
+                    Enviar
+                </button>
 
             </div>
 
@@ -41,4 +62,4 @@ function SendHumor() {
     )
 }
 
-export default SendHumor
+export default SendHumorComponent
