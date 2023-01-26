@@ -5,16 +5,34 @@ import { useEffect, useState } from "react";
 import HumorRating from "../../components/HumorRating/HumorRating";
 import api from '../../lib/axios'
 
-function SendHumor(){
-    // api.post('/humors')
+function SendHumor(humor: EHumorStatus, comment: String) {
+    api.post('/humors', { humor: humor, refUser: "", message: comment })
 }
 
 function SendHumorComponent() {
     const [humorStatus, setHumorStatus] = useState(EHumorStatus.Emotionless)
     const [sendComment, setSendComment] = useState(false);
+    const [comment, setComment] = useState(String)
+    const [humors, setHumors] = useState<any[]>([]);
+
+
     useEffect(() => {
-        // api.get('/humors')
+        api.post('/humor/all/user', {
+            refUser: "teste"
+        }).then(response => {
+            setHumors(response.data);
+            console.log(response.data)
+        }).catch(error => {
+            // handle error
+        });
     }, [])
+
+    function ValidateHumor() {
+        if (sendComment && comment == "teste")
+            return alert("Insira um comentário")
+
+        SendHumor(humorStatus, comment);
+    }
 
     return (
         <div className=" m-2 flex flex-col items-center ">
@@ -45,7 +63,7 @@ function SendHumorComponent() {
                             rounded-lg
                             w-24 h-8
                             text-center"
-                    onClick={SendHumor}
+                    onClick={ValidateHumor}
                 >
                     Enviar
                 </button>
@@ -57,6 +75,12 @@ function SendHumorComponent() {
                     className="bg-LIGHT_GRAY mt-2 p-2 max-w-md"
                     cols={40} rows={5} placeholder="Informe aqui seu comentário..." />
             )}
+
+            <div>
+                {humors.map(item => (
+                    <p key={item.id}>{item.name}</p>
+                ))}
+            </div>
 
         </div>
     )
