@@ -14,7 +14,7 @@ interface HumorRatingProps{
 const HumorRating: React.FC<HumorRatingProps> = ({humorStatus, setHumorStatus}) => {
     
     return (
-        <div className="flex">
+        <div className="flex flex-row justify-center gap-4">
             <button onClick={() => setHumorStatus(EHumorStatus.Sad)}>
                 <SadFace humor={humorStatus} />
             </button>

@@ -1,49 +1,42 @@
 import PrincipalButton from "../../components/Buttons/PrincipalButton/PrincipalButton"
 import CheckBox from "../../components/CheckBox/CheckBox";
-
 import { EHumorStatus } from "../../enums/EHumorStatus";
 import { useState } from "react";
 import HumorRating from "../../components/HumorRating/HumorRating";
 
-type CheckboxProps = {
-    checked: boolean;
-    onChange: (checked: boolean) => void;
-};
-
 function SendHumor() {
     const [humorStatus, setHumorStatus] = useState(EHumorStatus.Emotionless)
-
-    const [checked, setChecked] = useState(false);
-
-    const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setChecked(event.target.checked);
-    };
+    const [sendComment, setSendComment] = useState(false);
 
     return (
-        <div>
-            <h1 className="text-DARK_GRAY font-normal text-3xl">
-                Humor
-            </h1>
+        <div className=" m-2 flex flex-col items-center ">
+
+            <h1 className="text-DARK_GRAY font-normal text-3xl mb-5">Humor</h1>
 
             <HumorRating
                 humorStatus={humorStatus}
                 setHumorStatus={setHumorStatus}
             />
 
-            <div>
-                <PrincipalButton title="Enviar" />
+            <div className="flex flex-row m-4 items-center ">
+                <div className="mr-4">
+                    <CheckBox
+                        title={"Enviar Comentário"}
+                        checked={sendComment}
+                        setChecked={setSendComment}
+                    />
+                </div>
 
-                <CheckBox
-                    title={"Enviar Comentário"}
-                    checked={checked}
-                    setChecked={setChecked}
-                />
-
-                {checked && (
-                    <textarea className="bg-LIGHT_GRAY" cols={30} rows={5} placeholder="Informe aqui sua mensagem..." />
-                )}
+                <PrincipalButton title="Enviar"/>
 
             </div>
+
+            {sendComment && (
+                <textarea
+                    className="bg-LIGHT_GRAY mt-2 p-2 max-w-md"
+                    cols={40} rows={5} placeholder="Informe aqui seu comentário..." />
+            )}
+
         </div>
     )
 }

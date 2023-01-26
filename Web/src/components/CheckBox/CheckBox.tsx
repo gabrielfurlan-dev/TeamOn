@@ -22,10 +22,10 @@ const CheckboxDemo: React.FC<checkboxProps> = ({ title, checked, setChecked }) =
     <form>
       <div style={{ display: 'flex', alignItems: 'center' }}>
 
-        <input type="checkbox"
-          className=" w-6
-                      h-6
-                      rounded-full
+        <input
+          type="checkbox"
+          className=" w-6 h-6
+                      rounded-bl-full
                       d-flex
                       items-center
                       justify-center
@@ -34,9 +34,11 @@ const CheckboxDemo: React.FC<checkboxProps> = ({ title, checked, setChecked }) =
                       hover:bg-sky-100
                       focus:outline-none
                       focus:ring"
-          id="c1" checked={checked} onChange={handleCheckboxChange} />
+                      id='checkBox'
+          checked={checked}
+          onChange={handleCheckboxChange} />
 
-        <label className="Label text-GRAY " htmlFor="c1">{title}</label>
+        <label className="Label text-GRAY " htmlFor="checkBox">{title}</label>
 
       </div>
     </form>
