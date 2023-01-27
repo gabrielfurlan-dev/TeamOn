@@ -7,7 +7,7 @@ namespace TeamOn.Domain.Infra.Repositories.Humor
     public class HumorRepository : IHumorRepository
     {
         private HumorContext _dataContext;
-        
+
         public HumorRepository(HumorContext dataContext)
             => _dataContext = dataContext;
 

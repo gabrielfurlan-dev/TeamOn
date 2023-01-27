@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\teamon\\Server\\TeamOn.Domain\\TeamOn.Domain.csproj": {}
+    "C:\\dev\\teamon\\server\\TeamOn.Domain\\TeamOn.Domain.csproj": {}
   },
   "projects": {
-    "C:\\dev\\teamon\\Server\\TeamOn.Domain\\TeamOn.Domain.csproj": {
+    "C:\\dev\\teamon\\server\\TeamOn.Domain\\TeamOn.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\teamon\\Server\\TeamOn.Domain\\TeamOn.Domain.csproj",
+        "projectUniqueName": "C:\\dev\\teamon\\server\\TeamOn.Domain\\TeamOn.Domain.csproj",
         "projectName": "TeamOn.Domain",
-        "projectPath": "C:\\dev\\teamon\\Server\\TeamOn.Domain\\TeamOn.Domain.csproj",
+        "projectPath": "C:\\dev\\teamon\\server\\TeamOn.Domain\\TeamOn.Domain.csproj",
         "packagesPath": "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\teamon\\Server\\TeamOn.Domain\\obj\\",
+        "outputPath": "C:\\dev\\teamon\\server\\TeamOn.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gabriel Furlan\\AppData\\Roaming\\NuGet\\NuGet.Config"

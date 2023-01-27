@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Cjm3RYmvtDGiQWuHRnQYQ0t9YiPeiGgWoRNFyESSUFay4Do3YGeLvsMMsDwO4kts0zTpwaA7BVzyzSVC4XF7rg==",
+  "dgSpecHash": "YPk2LlA/Q/FP5cgKNhmD+I6urC5JbDgf0EW+sp237pQtHU+vxSC9igUaEjchzkGwxHtG2etEFxKcO82XDUzTFg==",
   "success": true,
-  "projectFilePath": "C:\\dev\\teamon\\Server\\TeamOn.Domain.Infra\\TeamOn.Domain.Infra.csproj",
+  "projectFilePath": "C:\\dev\\teamon\\server\\TeamOn.Domain.Infra\\TeamOn.Domain.Infra.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\dotnetenv\\2.3.0\\dotnetenv.2.3.0.nupkg.sha512",
     "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512",

@@ -19,7 +19,8 @@ namespace TeamOn.Domain.Humors.Commands.Handlers
 
             try
             {
-                var humor = new HumorEntity(command.HumorStatus, command.RefUser, command.Message);
+                // var humor = new HumorEntity(command.HumorStatus, command.RefUser, command.Message);
+                var humor = new HumorEntity(Enums.EHumorStatus.Emotionless, "teste", "teste");
                 _repository.SendTodaysHumor(humor);
 
                 return new GenericCommandResult(null, true, "Humor enviado.");
