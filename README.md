@@ -1,4 +1,4 @@
-# Table of Contents
+# Sumário
 1. [Sobre](https://github.com/gabrielfurlan-dev/TeamOn/edit/master/README.md#sobre)
 2. [Tecnologias_utilizadas](https://github.com/gabrielfurlan-dev/TeamOn/edit/master/README.md#tecnologias-utilizadas)
 3. [Como executar a aplicação](https://github.com/gabrielfurlan-dev/TeamOn/edit/master/README.md#como-executar-a-aplica%C3%A7%C3%A3o)
