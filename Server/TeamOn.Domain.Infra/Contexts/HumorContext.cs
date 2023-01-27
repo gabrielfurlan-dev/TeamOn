@@ -10,7 +10,7 @@ namespace TeamOn.Domain.Infra.Contexts
 
         public DbSet<HumorEntity> Humors { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseNpgsql(System.Environment.GetEnvironmentVariable ("SUPABASE_CONNECTION_STRING"));
+        // protected override void OnConfiguring(DbContextOptionsBuilder options)
+        //     => options.UseNpgsql(System.Environment.GetEnvironmentVariable("SUPABASE_CONNECTION_STRING"));
     }
 }
