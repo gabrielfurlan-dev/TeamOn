@@ -13,7 +13,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddTransient<IHumorRepository,HumorRepository>();
+builder.Services.AddTransient<IHumorRepository, HumorRepository>();
 builder.Services.AddTransient<SendHumorHandler, SendHumorHandler>();
 builder.Services.AddTransient<GetHumorHandler, GetHumorHandler>();
 
@@ -22,8 +22,18 @@ builder.Services.AddTransient<GetHumorHandler, GetHumorHandler>();
 
 builder.Services.AddDbContext<HumorContext>(options => options.UseInMemoryDatabase("Database"));
 
+
+builder.Services.AddCors(o => o.AddPolicy("MyPolicy",
+                    builder =>
+                    {
+                        builder.WithOrigins("http://localhost:5173")
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+                    }));
+
 var app = builder.Build();
 
+app.UseCors("MyPolicy");
 
 if (app.Environment.IsDevelopment())
 {
