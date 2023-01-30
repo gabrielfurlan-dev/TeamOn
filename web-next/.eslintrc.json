@@ -1,11 +1,16 @@
 {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "jest": true
     },
     "extends": [
         "plugin:react/recommended",
-        "standard-with-typescript"
+        "standard-with-typescript",
+        "plugin:@typescript-eslint/recommended",
+        "prettier/@typescript-eslint",
+        "prettier/standard",
+        "prettier/react"
     ],
     "overrides": [
     ],
@@ -13,8 +18,13 @@
         "ecmaVersion": "latest"
     },
     "plugins": [
-        "react"
+        "react",
+        "@typescript-eslint",
+        "prettier"
     ],
     "rules": {
+        "prettier/prettier" : "error",
+        "space-before-function-paren" : "off",
+        "react/prop-types" : "off"
     }
 }
