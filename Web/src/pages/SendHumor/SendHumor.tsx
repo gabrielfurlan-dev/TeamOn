@@ -6,25 +6,32 @@ import HumorRating from "../../components/HumorRating/HumorRating";
 import api from '../../lib/axios'
 
 function SendHumor(humor: EHumorStatus, comment: String) {
-    api.post('/humors', { humor: humor, refUser: "", message: comment })
+    api.post('/humors', { humor: humor, refUser: "kappa2", message: comment })
+}
+
+type Humor = {
+    id: string,
+    sendDate: Date,
+    humorStatus: number,
+    refUser: string,
+    message: string
 }
 
 function SendHumorComponent() {
     const [humorStatus, setHumorStatus] = useState(EHumorStatus.Emotionless)
     const [sendComment, setSendComment] = useState(false);
     const [comment, setComment] = useState(String)
-    const [humors, setHumors] = useState<any[]>([]);
+    const [humors, setHumors] = useState<Humor[]>([]);
 
 
     useEffect(() => {
-        api.post('/humor/all/user', {
-            refUser: "teste"
-        }).then(response => {
-            setHumors(response.data);
-            console.log(response.data)
-        }).catch(error => {
-            // handle error
-        });
+        api.get('/humor/all/user', { params: "kappa" })
+            .then(response => {
+                setHumors(response.data);
+                console.log(response.data)
+            }).catch(error => {
+                console.log(error);
+            });
     }, [])
 
     function ValidateHumor() {
@@ -78,7 +85,7 @@ function SendHumorComponent() {
 
             <div>
                 {humors.map(item => (
-                    <p key={item.id}>{item.name}</p>
+                    <p key={item.id}>{item.humorStatus + " " + item.refUser}</p>
                 ))}
             </div>
 
