@@ -1,20 +1,22 @@
 import Head from 'next/head'
 
 import Logo from '../assets/Logo_TeamOn.svg'
+import HomePage from './HomePage/HomePage';
 
 const Home: React.FC = () => {
-  return (
-    <>
-      <Head>
-        <title>TeamOn</title>
-      </Head>
+    return (
+        <>
+            <Head>
+                <title>TeamOn</title>
+            </Head>
 
-      <main>
-        <Logo/>
-        <h1>Hello, World!</h1>
-      </main>
-    </>
-  )
+            <main>
+
+                <HomePage />
+
+            </main>
+        </>
+    )
 }
 
 export default Home;
