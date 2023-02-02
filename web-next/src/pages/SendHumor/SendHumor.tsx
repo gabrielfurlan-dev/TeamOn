@@ -1,13 +1,11 @@
-import PrincipalButton from "../../components/Buttons/PrincipalButton/PrincipalButton"
 import CheckBox from "../../components/CheckBox/CheckBox";
 import { EHumorStatus } from "../../enums/EHumorStatus";
-import { useEffect, useState } from "react";
+import { SetStateAction, useEffect, useState } from "react";
 import HumorRating from "../../components/HumorRating/HumorRating";
-import api from '../../lib/axios'
 
-function SendHumor(humor: EHumorStatus, comment: String) {
-    api.post('/humors', { humor: humor, refUser: "kappa2", message: comment })
-}
+// function SendHumor(humor: EHumorStatus, comment: String) {
+//     api.post('/humors', { humor: humor, refUser: "kappa2", message: comment })
+// }
 
 type Humor = {
     id: string,
@@ -23,25 +21,25 @@ function SendHumorComponent() {
     const [comment, setComment] = useState(String)
     const [humors, setHumors] = useState<Humor[]>([]);
 
-
-    useEffect(() => {
-        api.get('/humor/all/user', { params: "kappa" })
-            .then(response => {
-                setHumors(response.data);
-                console.log(response.data)
-            }).catch(error => {
-                console.log(error);
-            });
-    }, [])
+    // useEffect(() => {
+    //     api.get('/humor/all/user', { params: "kappa" })
+    //         .then((response: { data: SetStateAction<Humor[]>; }) => {
+    //             setHumors(response.data);
+    //             console.log(response.data)
+    //         }).catch((error: any) => {
+    //             console.log(error);
+    //         });
+    // }, [])
 
     function ValidateHumor() {
         if (sendComment && comment == "teste")
             return alert("Insira um comentário")
 
-        SendHumor(humorStatus, comment);
+        // SendHumor(humorStatus, comment);
     }
 
     return (
+
         <div className=" m-2 flex flex-col items-center ">
 
             <h1 className="text-DARK_GRAY font-normal text-3xl mb-5">Humor</h1>
@@ -62,8 +60,8 @@ function SendHumorComponent() {
 
                 <button
                     type="button"
-                    className="bg-LIGHT_BLUE 
-                            p-2 
+                    className="bg-LIGHT_BLUE
+                            p-2
                             text-base
                             font-semibold
                           text-WHITE

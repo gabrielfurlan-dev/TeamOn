@@ -1,6 +1,6 @@
 import React from 'react';
-import { EHumorStatus } from '../../../../enums/EHumorStatus';
-import { FacesProps } from '../../../../Interfaces/FaceProps';
+import { EHumorStatus } from '../enums/EHumorStatus';
+import { FacesProps } from '../Interfaces/FaceProps';
 
 const SadFace: React.FC<FacesProps> = ({ width, height, humor }) => {
     return (
@@ -18,7 +18,7 @@ const SadFace: React.FC<FacesProps> = ({ width, height, humor }) => {
                 stroke-linecap="round"
                 stroke-linejoin="round"
             />
-            
+
             <circle cx="12.5898" cy="12.5" r="2.5" fill="#646464" />
             <circle cx="23.5898" cy="12.5" r="2.5" fill="#646464" />
 

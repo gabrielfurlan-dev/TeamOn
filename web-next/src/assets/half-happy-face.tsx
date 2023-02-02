@@ -1,6 +1,6 @@
 import React from 'react';
-import { EHumorStatus } from '../../../../enums/EHumorStatus';
-import { FacesProps } from '../../../../Interfaces/FaceProps';
+import { EHumorStatus } from '../enums/EHumorStatus';
+import { FacesProps } from '../Interfaces/FaceProps';
 
 const HalfHappyFace: React.FC<FacesProps> = ({ width, height, humor }) => {
     return (
