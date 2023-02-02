@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import Emotionless from 'C:\\dev\\TeamOn\\web-next\\src\\assets\\emotionless-face.svg';
-import HalfHappy from 'C:\\dev\\TeamOn\\web-next\\src\\assets\\emotionless-face.svg';
-import HalfSad from 'C:\\dev\\TeamOn\\web-next\\src\\assets\\emotionless-face.svg';
-import Happy from 'C:\\dev\\TeamOn\\web-next\\src\\assets\\emotionless-face.svg';
-import Sad from 'C:\\dev\\TeamOn\\web-next\\src\\assets\\emotionless-face.svg';
+import React from 'react';
 import { EHumorStatus } from '../../enums/EHumorStatus';
+import SadFace from '@/assets/sad-face';
+import HalfSadFace from '@/assets/half-sad-face';
+import EmotionlessFace from '@/assets/emotionless-face';
+import HalfHappyFace from '@/assets/half-happy-face';
+import HappyFace from '@/assets/happy-face';
 
 interface HumorRatingProps {
     humorStatus: EHumorStatus,
@@ -17,23 +17,23 @@ const HumorRating: React.FC<HumorRatingProps> = ({ humorStatus, setHumorStatus }
         <>
             <div className="flex flex-row justify-center gap-4">
                 <button onClick={() => setHumorStatus(EHumorStatus.Sad)}>
-                    <Sad />
+                    <SadFace humor={humorStatus}/>
                 </button>
 
                 <button onClick={() => setHumorStatus(EHumorStatus.HalfSad)}>
-                    <HalfSad />
+                    <HalfSadFace humor={humorStatus} />
                 </button>
 
                 <button onClick={() => setHumorStatus(EHumorStatus.Emotionless)}>
-                    <Emotionless />
+                    <EmotionlessFace humor={humorStatus} />
                 </button>
 
                 <button onClick={() => setHumorStatus(EHumorStatus.HalfHappy)}>
-                    <HalfHappy />
+                    <HalfHappyFace humor={humorStatus} />
                 </button>
 
                 <button onClick={() => setHumorStatus(EHumorStatus.Happy)}>
-                    <Happy />
+                    <HappyFace humor={humorStatus} />
                 </button>
             </div>
         </>
