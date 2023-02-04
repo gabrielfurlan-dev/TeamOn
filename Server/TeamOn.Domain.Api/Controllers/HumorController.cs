@@ -11,7 +11,7 @@ namespace TeamOn.Domain.Api.Controllers;
 public class WeatherForecastController : ControllerBase
 {
     [Route("send")]
-    [HttpGet]
+    [HttpPost]
     public ICommandResult SendHumor(
         [FromBody] SendHumorCommand command,
         [FromServices] SendHumorHandler handler)
