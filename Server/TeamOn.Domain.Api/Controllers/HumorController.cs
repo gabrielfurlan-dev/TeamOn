@@ -18,11 +18,11 @@ public class WeatherForecastController : ControllerBase
     => handler.Handle(command);
 
     [Route("all/user")]
-    [HttpPost]
+    [HttpGet]
     public IEnumerable<HumorEntity> GetAllHumorsByUser(
-        [FromBody] string refUser,
+        // [FromBody] string refUser
         [FromServices] GetHumorHandler handler)
-        => handler.GetAllByUser(refUser);
+        => handler.GetAllByUser("string");
 
     [Route("id")]
     [HttpGet]

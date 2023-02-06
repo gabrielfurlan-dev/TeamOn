@@ -12,8 +12,6 @@ const CheckboxDemo: React.FC<checkboxProps> = ({ title, checked, setChecked }) =
         setChecked(event.target.checked);
     };
 
-    console.log(checked);
-
     return (
         <form>
             <div style={{ display: 'flex', alignItems: 'center' }}>

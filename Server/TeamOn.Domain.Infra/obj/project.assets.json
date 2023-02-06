@@ -5700,32 +5700,39 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\": {}
+    "C:\\Users\\adria\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\teamon\\server\\TeamOn.Domain.Infra\\TeamOn.Domain.Infra.csproj",
+      "projectUniqueName": "C:\\dev\\TeamOn\\server\\TeamOn.Domain.Infra\\TeamOn.Domain.Infra.csproj",
       "projectName": "TeamOn.Domain.Infra",
-      "projectPath": "C:\\dev\\teamon\\server\\TeamOn.Domain.Infra\\TeamOn.Domain.Infra.csproj",
-      "packagesPath": "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\teamon\\server\\TeamOn.Domain.Infra\\obj\\",
+      "projectPath": "C:\\dev\\TeamOn\\server\\TeamOn.Domain.Infra\\TeamOn.Domain.Infra.csproj",
+      "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
+      "outputPath": "C:\\dev\\TeamOn\\server\\TeamOn.Domain.Infra\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Gabriel Furlan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/precisaosistemas/_packaging/InovaPay/nuget/v3/index.json": {},
+        "https://pkgs.dev.azure.com/precisaosistemas/_packaging/RecargaPS/nuget/v3/index.json": {},
+        "https://precisaosistemas.pkgs.visualstudio.com/_packaging/Bluedesk/nuget/v3/index.json": {},
+        "https://precisaosistemas.pkgs.visualstudio.com/_packaging/Inovafarma/nuget/v3/index.json": {},
+        "https://precisaosistemas.pkgs.visualstudio.com/_packaging/Precisao/nuget/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\dev\\teamon\\server\\TeamOn.Domain\\TeamOn.Domain.csproj": {
-              "projectPath": "C:\\dev\\teamon\\server\\TeamOn.Domain\\TeamOn.Domain.csproj"
+            "C:\\dev\\TeamOn\\server\\TeamOn.Domain\\TeamOn.Domain.csproj": {
+              "projectPath": "C:\\dev\\TeamOn\\server\\TeamOn.Domain\\TeamOn.Domain.csproj"
             }
           }
         }
@@ -5779,7 +5786,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
