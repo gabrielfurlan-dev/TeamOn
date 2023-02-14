@@ -46,7 +46,7 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
             <div>
                 {humoursProps && humoursProps.map(item => (
 
-                    <p key={item.id}>{`${item.humourStatus} ${item.refUser}`}</p>
+                    <p key={item.id}>{`${EHumourStatus[item.humourStatus]} ${item.refUser}`}</p>
                 ))}
             </div>
         </div>
