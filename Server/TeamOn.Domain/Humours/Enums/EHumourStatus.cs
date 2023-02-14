@@ -1,6 +1,6 @@
-namespace TeamOn.Domain.Humors.Enums
+namespace TeamOn.Domain.Humours.Enums
 {
-    public enum EHumorStatus
+    public enum EHumourStatus
     {
         Happy,
         HalfHappy,

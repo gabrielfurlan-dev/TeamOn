@@ -5705,11 +5705,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\TeamOn\\server\\TeamOn.Domain.Infra\\TeamOn.Domain.Infra.csproj",
+      "projectUniqueName": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.Infra\\TeamOn.Domain.Infra.csproj",
       "projectName": "TeamOn.Domain.Infra",
-      "projectPath": "C:\\dev\\TeamOn\\server\\TeamOn.Domain.Infra\\TeamOn.Domain.Infra.csproj",
+      "projectPath": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.Infra\\TeamOn.Domain.Infra.csproj",
       "packagesPath": "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\TeamOn\\server\\TeamOn.Domain.Infra\\obj\\",
+      "outputPath": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.Infra\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Gabriel Furlan\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -5724,8 +5724,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\dev\\TeamOn\\server\\TeamOn.Domain\\TeamOn.Domain.csproj": {
-              "projectPath": "C:\\dev\\TeamOn\\server\\TeamOn.Domain\\TeamOn.Domain.csproj"
+            "C:\\dev\\TeamOn\\Server\\TeamOn.Domain\\TeamOn.Domain.csproj": {
+              "projectPath": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain\\TeamOn.Domain.csproj"
             }
           }
         }

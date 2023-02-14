@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using TeamOn.Domain.Humors.Commands.Handlers;
-using TeamOn.Domain.Humors.Repositories;
+using TeamOn.Domain.Humours.Commands.Handlers;
+using TeamOn.Domain.Humours.Repositories;
 using TeamOn.Domain.Infra.Contexts;
-using TeamOn.Domain.Infra.Repositories.Humor;
+using TeamOn.Domain.Infra.Repositories.Humour;
 
 DotNetEnv.Env.Load();
 
@@ -13,14 +13,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddTransient<IHumorRepository, HumorRepository>();
-builder.Services.AddTransient<SendHumorHandler, SendHumorHandler>();
-builder.Services.AddTransient<GetHumorHandler, GetHumorHandler>();
+builder.Services.AddTransient<IHumourRepository, HumourRepository>();
+builder.Services.AddTransient<SendHumourHandler, SendHumourHandler>();
+builder.Services.AddTransient<GetHumourHandler, GetHumourHandler>();
 
-// builder.Services.AddDbContext<HumorContext>(options 
+// builder.Services.AddDbContext<HumourContext>(options 
 //     => options.UseNpgsql(builder.Configuration.GetConnectionString(System.Environment.GetEnvironmentVariable("SUPABASE_CONNECTION_STRING"))));
 
-builder.Services.AddDbContext<HumorContext>(options => options.UseInMemoryDatabase("Database"));
+builder.Services.AddDbContext<HumourContext>(options => options.UseInMemoryDatabase("Database"));
 
 
 builder.Services.AddCors(o => o.AddPolicy("MyPolicy",

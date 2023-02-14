@@ -1,14 +1,14 @@
 import React from 'react';
-import { EHumorStatus } from '../enums/EHumorStatus';
+import { EHumourStatus } from '../enums/EHumourStatus';
 import { FacesProps } from '../Interfaces/FaceProps';
 
-const SadFace: React.FC<FacesProps> = ({ width, height, humor }) => {
+const SadFace: React.FC<FacesProps> = ({ width, height, humour: humour }) => {
     return (
         <svg
             width={width || 36}
             height={height || 36}
             viewBox="0 0 36 36"
-            fill={humor == EHumorStatus.Sad ? "#FFCC4D" : "none"}
+            fill={humour == EHumourStatus.Sad ? "#FFCC4D" : "none"}
             xmlns="http://www.w3.org/2000/svg">
 
             <path

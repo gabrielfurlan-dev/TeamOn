@@ -11,16 +11,16 @@ namespace TeamOn.Domain.Infra.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Humor",
+                name: "Humour",
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "text", nullable: false),
-                    HumorStatus = table.Column<int>(type: "integer", nullable: false),
+                    HumourStatus = table.Column<int>(type: "integer", nullable: false),
                     RefUser = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Humor", x => x.Id);
+                    table.PrimaryKey("PK_Humour", x => x.Id);
                 });
         }
 
@@ -28,7 +28,7 @@ namespace TeamOn.Domain.Infra.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Humor");
+                name: "Humour");
         }
     }
 }

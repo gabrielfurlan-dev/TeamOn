@@ -1,11 +1,11 @@
-export interface IHumor {
+export interface IHumour {
     id: string;
     sendDate: string;
-    humorStatus: number;
+    humourStatus: number;
     refUser: string;
     message: string;
 }
 
 export type SendHumourProps = {
-    humours: IHumor[];
+    humours: IHumour[];
 };

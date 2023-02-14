@@ -1,22 +1,22 @@
 using Flunt.Notifications;
 using Flunt.Validations;
 using TeamOn.Domain.Contracts.Commands;
-using TeamOn.Domain.Humors.Enums;
+using TeamOn.Domain.Humours.Enums;
 
-namespace TeamOn.Domain.Humors.Commands.Inputs
+namespace TeamOn.Domain.Humours.Commands.Inputs
 {
-    public class SendHumorCommand : ICommandContract
+    public class SendHumourCommand : ICommandContract
     {
-        public SendHumorCommand(EHumorStatus humorStatus,
+        public SendHumourCommand(EHumourStatus humourStatus,
                                 string refUser,
                                 string message)
         {
-            HumorStatus = humorStatus;
+            HumourStatus = humourStatus;
             RefUser = refUser;
             Message = message;
         }
 
-        public EHumorStatus HumorStatus { get; private set; }
+        public EHumourStatus HumourStatus { get; private set; }
         public string RefUser { get; private set; }
         public string Message { get; private set; }
 

@@ -1,16 +1,15 @@
-import { IHumor, SendHumourProps } from "@/Interfaces/Humour"
-import SendHumorComponent from "@/layouts/SendHumor/SendHumor"
+import { IHumour, SendHumourProps } from "@/Interfaces/Humour"
+import SendHumourComponent from "@/layouts/SendHumour/SendHumour"
 import api from "@/lib/axios"
 import { GetServerSideProps, GetServerSidePropsContext, InferGetServerSidePropsType } from "next"
 
 export default function Humour({ humours }: InferGetServerSidePropsType<typeof getServerSideProps>) {
-    return (<SendHumorComponent humours={humours} />)
+    return (<SendHumourComponent humours={humours} />)
 }
-
 
 export const getServerSideProps: GetServerSideProps<SendHumourProps> = async (context: GetServerSidePropsContext) => {
 
-    const { data: humours } = await api.get<IHumor[]>('humor/all/user')
+    const { data: humours } = await api.get<IHumour[]>('humour/all/user')
 
     return {
         props: {

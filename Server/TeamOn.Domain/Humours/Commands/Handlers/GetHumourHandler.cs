@@ -1,18 +1,17 @@
 using System.Windows.Input;
-using TeamOn.Domain.Humors.Entities;
-using TeamOn.Domain.Humors.Repositories;
+using TeamOn.Domain.Humours.Entities;
+using TeamOn.Domain.Humours.Repositories;
 
-namespace TeamOn.Domain.Humors.Commands.Handlers
+namespace TeamOn.Domain.Humours.Commands.Handlers
 {
-    public class GetHumorHandler
+    public class GetHumourHandler
     {
+        private IHumourRepository _repository;
 
-        private IHumorRepository _repository;
-
-        public GetHumorHandler(IHumorRepository repository)
+        public GetHumourHandler(IHumourRepository repository)
             => _repository = repository;
 
-        public IEnumerable<HumorEntity> GetAllByUser(string refUser)
+        public IEnumerable<HumourEntity> GetAllByUser(string refUser)
         {
             try
             {

@@ -1,7 +1,7 @@
-import { EHumorStatus } from './../enums/EHumorStatus';
+import { EHumourStatus } from "../enums/EHumourStatus";
 
 export interface FacesProps {
-    width?: number,
-    height?: number
-    humor?: EHumorStatus
+    width?: number;
+    height?: number;
+    humour?: EHumourStatus;
 }

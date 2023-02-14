@@ -1,24 +1,20 @@
 import CheckBox from "../../components/CheckBox/CheckBox";
-import { EHumorStatus } from "../../enums/EHumorStatus";
+import { EHumourStatus as EHumourStatus } from "../../enums/EHumourStatus";
 import { useState } from "react";
-import HumorRating from "../../components/HumorRating/HumorRating";
-import { IHumor, SendHumourProps } from "@/Interfaces/Humour";
+import HumourRating from "../../components/HumourRating/HumourRating";
+import { IHumour, SendHumourProps } from "@/Interfaces/Humour";
 
+function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
 
-function SendHumorComponent({ humours }: SendHumourProps) {
-
-    const [humorStatus, setHumorStatus] = useState(EHumorStatus.Emotionless)
+    const [humourStatus, setHumourStatus] = useState(EHumourStatus.Emotionless)
     const [sendComment, setSendComment] = useState(false);
-    const [comment, setComment] = useState(String)
-    const [humors, setHumors] = useState<IHumor[]>([]);
 
     return (
-
         <div className=" m-2 flex flex-col items-center ">
-            <h1 className="text-DARK_GRAY font-normal text-3xl mb-5">Humor</h1>
-            <HumorRating
-                humorStatus={humorStatus}
-                setHumorStatus={setHumorStatus}
+            <h1 className="text-DARK_GRAY font-normal text-3xl mb-5">Humour</h1>
+            <HumourRating
+                humourStatus={humourStatus}
+                setHumourStatus={setHumourStatus}
             />
             <div className="flex flex-row m-4 items-center ">
                 <div className="mr-4">
@@ -48,13 +44,13 @@ function SendHumorComponent({ humours }: SendHumourProps) {
                     cols={40} rows={5} placeholder="Informe aqui seu comentário..." />
             )}
             <div>
-                {humours && humours.map(item => (
+                {humoursProps && humoursProps.map(item => (
 
-                    <p key={item.id}>{`${item.humorStatus} ${item.refUser}`}</p>
+                    <p key={item.id}>{`${item.humourStatus} ${item.refUser}`}</p>
                 ))}
             </div>
         </div>
     )
 }
 
-export default SendHumorComponent
+export default SendHumourComponent

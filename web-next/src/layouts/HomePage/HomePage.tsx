@@ -1,4 +1,4 @@
-import SendHumorComponent from "../SendHumor/SendHumor"
+import SendHumourComponent from "../SendHumour/SendHumour"
 
 function App() {
 

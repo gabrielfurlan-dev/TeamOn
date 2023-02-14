@@ -9,8 +9,8 @@ using TeamOn.Domain.Infra.Contexts;
 
 namespace TeamOn.Domain.Infra.Migrations
 {
-    [DbContext(typeof(HumorContext))]
-    partial class HumorContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(HumourContext))]
+    partial class HumourContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -21,12 +21,12 @@ namespace TeamOn.Domain.Infra.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("TeamOn.Domain.Humor.Entities.HumorEntity", b =>
+            modelBuilder.Entity("TeamOn.Domain.Humour.Entities.HumourEntity", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("text");
 
-                    b.Property<int>("HumorStatus")
+                    b.Property<int>("HumourStatus")
                         .HasColumnType("integer");
 
                     b.Property<string>("RefUser")
@@ -35,7 +35,7 @@ namespace TeamOn.Domain.Infra.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Humor");
+                    b.ToTable("Humour");
                 });
 #pragma warning restore 612, 618
         }

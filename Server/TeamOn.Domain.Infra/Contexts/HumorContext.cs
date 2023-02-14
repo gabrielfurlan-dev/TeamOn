@@ -1,14 +1,14 @@
 using Microsoft.EntityFrameworkCore;
-using TeamOn.Domain.Humors.Entities;
+using TeamOn.Domain.Humours.Entities;
 
 namespace TeamOn.Domain.Infra.Contexts
 {
-    public class HumorContext : DbContext
+    public class HumourContext : DbContext
     {
-        public HumorContext() { }
-        public HumorContext(DbContextOptions<HumorContext> options) : base(options) { }
+        public HumourContext() { }
+        public HumourContext(DbContextOptions<HumourContext> options) : base(options) { }
 
-        public DbSet<HumorEntity> Humors { get; set; }
+        public DbSet<HumourEntity> Humours { get; set; }
 
         // protected override void OnConfiguring(DbContextOptionsBuilder options)
         //     => options.UseNpgsql(System.Environment.GetEnvironmentVariable("SUPABASE_CONNECTION_STRING"));

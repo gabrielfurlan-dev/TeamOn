@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "v5pVQUnKfKkbVBEXPjLkkIkSOswNLeOpKH1iFWwIHC+G6w2DNQwMP9YjIbm6vQw/n43ttoKzO00eyBbVRtaMfw==",
+  "dgSpecHash": "hPFWNmyLZC4Y3KpLb/vvhozY37yYDZHW3xlCFosplq5o2hzUlu6a3KubtzGndE2IKrRwJ2kBNhah3C+7hdMh0Q==",
   "success": true,
-  "projectFilePath": "C:\\dev\\TeamOn\\server\\TeamOn.Domain\\TeamOn.Domain.csproj",
+  "projectFilePath": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain\\TeamOn.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512"
   ],

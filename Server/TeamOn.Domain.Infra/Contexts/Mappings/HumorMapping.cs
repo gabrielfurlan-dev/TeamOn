@@ -1,15 +1,15 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PgsqlDataTypes;
-using TeamOn.Domain.Humors.Entities;
+using TeamOn.Domain.Humours.Entities;
 
 namespace TeamOn.Domain.Infra.Contexts.Mappings
 {
-    public class HumorMapping : IEntityTypeConfiguration<HumorEntity>
+    public class HumourMapping : IEntityTypeConfiguration<HumourEntity>
     {
-        public void Configure(EntityTypeBuilder<HumorEntity> builder)
+        public void Configure(EntityTypeBuilder<HumourEntity> builder)
         {
-            builder.ToTable("Humor");
+            builder.ToTable("Humour");
 
             builder.HasKey(x => x.Id);
 
@@ -17,9 +17,9 @@ namespace TeamOn.Domain.Infra.Contexts.Mappings
                     .ValueGeneratedOnAdd()
                     .UseIdentityColumn();
 
-            builder.Property(x => x.HumorStatus)
+            builder.Property(x => x.HumourStatus)
                     .IsRequired()
-                    .HasColumnName("HumorStatus")
+                    .HasColumnName("HumourStatus")
                     .HasColumnType(EPgsqlDataTypes.BigInt.ToString())
                     .HasMaxLength(1);
 
