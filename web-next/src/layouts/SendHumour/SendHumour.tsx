@@ -2,12 +2,13 @@ import CheckBox from "../../components/CheckBox/CheckBox";
 import { EHumourStatus as EHumourStatus } from "../../enums/EHumourStatus";
 import { useState } from "react";
 import HumourRating from "../../components/HumourRating/HumourRating";
-import { IHumour, SendHumourProps } from "@/Interfaces/Humour";
+import { SendHumourProps } from "@/Interfaces/Humour";
+import Humours from '@/assets/humours'
 
 function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
 
     const [humourStatus, setHumourStatus] = useState(EHumourStatus.Emotionless)
-    const [sendComment, setSendComment] = useState(false);
+    const [sendComment, setSendComment] = useState(true);
 
     return (
         <div className=" m-2 flex flex-col items-center ">
@@ -17,7 +18,7 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
                 setHumourStatus={setHumourStatus}
             />
             <div className="flex flex-row m-4 items-center ">
-                <div className="mr-4">
+                <div className="mx-4">
                     <CheckBox
                         title={"Enviar Comentário"}
                         checked={sendComment}
@@ -40,15 +41,28 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
             </div>
             {sendComment && (
                 <textarea
-                    className="bg-LIGHT_GRAY mt-2 p-2 max-w-md"
+                    className="bg-LIGHT_GRAY mt-2 p-2 mb-8 max-w-md"
                     cols={40} rows={5} placeholder="Informe aqui seu comentário..." />
             )}
-            <div>
-                {humoursProps && humoursProps.map(item => (
 
-                    <p key={item.id}>{`${EHumourStatus[item.humourStatus]} ${item.refUser}`}</p>
+            <p className="mb-4 text-DARK_GRAY">O que está rolando?</p>
+
+            <div className="w-full max-w-md">
+                {humoursProps && humoursProps.map(item => (
+                    <div className="flex justify-between bg-LIGHT_GRAY py-2 m-2 px-4 rounded-lg">
+                        <p
+                            className="text-GRAY"
+                            key={item.id}>
+                            {`${item.refUser} enviou seu humor hoje!`}
+                        </p>
+                        <div className="mx-4 mt-1">
+                            <Humours />
+                        </div>
+                    </div>
+
                 ))}
             </div>
+
         </div>
     )
 }

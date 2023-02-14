@@ -31,7 +31,7 @@ const CheckboxDemo: React.FC<checkboxProps> = ({ title, checked, setChecked }) =
                     checked={checked}
                     onChange={handleCheckboxChange} />
 
-                <label className="Label text-GRAY " htmlFor="checkBox">{title}</label>
+                <label className="Label text-GRAY mx-4 " htmlFor="checkBox">{title}</label>
             </div>
         </form>
     );
