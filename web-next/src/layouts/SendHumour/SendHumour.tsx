@@ -4,11 +4,17 @@ import { useState } from "react";
 import HumourRating from "../../components/HumourRating/HumourRating";
 import { SendHumourProps } from "@/Interfaces/Humour";
 import Humours from '@/assets/humours'
+import { SendHumour } from "@/pages/humour";
 
 function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
 
     const [humourStatus, setHumourStatus] = useState(EHumourStatus.Emotionless)
     const [sendComment, setSendComment] = useState(true);
+    const [comment, setComment] = useState(String);
+
+    function SendHumor2(): void {
+        SendHumour(humourStatus, comment, "Teste");
+    }
 
     return (
         <div className=" m-2 flex flex-col items-center ">
@@ -35,6 +41,7 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
                             rounded-lg
                             w-24 h-8
                             text-center"
+                    onClick={() => SendHumor2()}
                 >
                     Enviar
                 </button>
@@ -42,7 +49,8 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
             {sendComment && (
                 <textarea
                     className="bg-LIGHT_GRAY mt-2 p-2 mb-8 max-w-md"
-                    cols={40} rows={5} placeholder="Informe aqui seu comentário..." />
+                    cols={40} rows={5} placeholder="Informe aqui seu comentário..."
+                    onChange={event => setComment(event.target.value)} />
             )}
 
             <p className="mb-4 text-DARK_GRAY">O que está rolando?</p>
