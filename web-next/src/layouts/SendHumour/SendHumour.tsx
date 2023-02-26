@@ -1,6 +1,6 @@
 import CheckBox from "../../components/CheckBox/CheckBox";
 import { EHumourStatus as EHumourStatus } from "../../enums/EHumourStatus";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import HumourRating from "../../components/HumourRating/HumourRating";
 import { SendHumourProps } from "@/Interfaces/Humour";
 import Humours from '@/assets/humours'
@@ -12,7 +12,13 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
     const [sendComment, setSendComment] = useState(true);
     const [comment, setComment] = useState(String);
 
-    function SendHumor2(): void {
+    useEffect(() => {
+        if (!sendComment) {
+            setComment('');
+        }
+    }, [sendComment]);
+
+    function SendHumorHandle(): void {
         SendHumour(humourStatus, comment, "Teste");
     }
 
@@ -34,14 +40,13 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
                 <button
                     type="button"
                     className="bg-LIGHT_BLUE
-                            p-2
                             text-base
                             font-semibold
                           text-WHITE
                             rounded-lg
-                            w-24 h-8
+                            w-24 h-10
                             text-center"
-                    onClick={() => SendHumor2()}
+                    onClick={() => SendHumorHandle()}
                 >
                     Enviar
                 </button>
@@ -53,7 +58,7 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
                     onChange={event => setComment(event.target.value)} />
             )}
 
-            <p className="mb-4 text-DARK_GRAY">O que está rolando?</p>
+            <p className="mb-4 text-DARK_GRAY">O que está rolando</p>
 
             <div className="w-full max-w-md">
                 {humoursProps && humoursProps.map(item => (

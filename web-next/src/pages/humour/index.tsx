@@ -11,14 +11,11 @@ export default function Humour({ humours }: InferGetServerSidePropsType<typeof g
 
 export async function SendHumour(humourStatus: EHumourStatus, message: string, refUser: string) {
     try {
-        alert(humourStatus);
-        alert(message);
-        alert(refUser);
-        await api.post("/humour/send",
+        await api.post("humour/send",
             {
                 humourStatus: humourStatus,
                 message: message,
-                refUser: "Teste"
+                refUser: "String"
             }
         )
     } catch (error) {
