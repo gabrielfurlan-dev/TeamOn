@@ -8,12 +8,12 @@ namespace TeamOn.Domain.Users.Commands.Hanlders
     {
         IUserRepository _repository;
 
-        public GetAllUsersHandler(IUserRepository repository) 
+        public GetAllUsersHandler(IUserRepository repository)
             => _repository = repository;
 
         public ICommandResult Handle(GetAllUsersCommand command)
         {
-            if (command.Validate())
+            if (!command.Validate())
                 return new GenericCommandResult(null, false, "Command não é válido.");
 
             try
