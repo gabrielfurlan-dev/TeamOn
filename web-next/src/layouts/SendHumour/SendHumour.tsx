@@ -4,14 +4,7 @@ import { useEffect, useState } from "react";
 import HumourRating from "../../components/HumourRating/HumourRating";
 import { IHumour, SendHumourProps } from "@/Interfaces/Humour";
 import Humours from '@/assets/humours'
-import { SendHumour } from "@/pages/humour";
-import api from "@/lib/axios";
-import { AxiosResponse } from "axios";
-
-
-export async function GetHumoursByUser(): Promise<AxiosResponse<IHumour[]>> {
-    return await api.get<IHumour[]>('humour/all/user');
-}
+import { GetHumoursByUser, SendHumour } from "@/hooks/useHumors";
 
 function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
     const [humors, setHumours] = useState<IHumour[]>(humoursProps)
@@ -26,11 +19,6 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
     }, [sendComment]);
 
     function SendHumorHandle(): void {
-        if (humors.length > 1) {
-            sweetAlert("Ooops!", "Você já enviou o seu humor hoje.", "error");
-            return;
-        }
-
         SendHumour(humourStatus, comment, "refUser", "refCompany");
         GetHumoursByUser().then(response => setHumours(response.data))
     }
@@ -73,7 +61,7 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
 
             <p className="mb-4 text-DARK_GRAY">O que está rolando</p>
 
-            <div className="w-full max-w-md">
+            <div className="w-full max-w-md" id="humoursList">
                 {humors && humors.map(item => (
                     <div className="flex justify-between bg-LIGHT_GRAY py-2 m-2 px-4 rounded-lg">
                         <p

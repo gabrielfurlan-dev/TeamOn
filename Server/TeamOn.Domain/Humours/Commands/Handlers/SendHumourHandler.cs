@@ -14,6 +14,12 @@ namespace TeamOn.Domain.Humours.Commands.Handlers
 
         public ICommandResult Handle(SendHumourCommand command)
         {
+            var jaEnviouHoje = _repository.GetTodaysHumourByCompany(command.RefCompany)
+                                          .Any(x => x.RefUser == command.RefUser);
+
+            if(jaEnviouHoje) 
+                return new GenericCommandResult(data: null, success: false, "Você já enviou seu humor hoje.");
+
             if (!command.Validate())
                 return new GenericCommandResult(data: null, success: false, "Command inválido.");
 
