@@ -6,11 +6,21 @@ import { IHumour, SendHumourProps } from "@/Interfaces/Humour";
 import Humours from '@/assets/humours'
 import { GetHumoursByUser, SendHumour } from "@/hooks/useHumors";
 
+
+
+
 function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
-    const [humors, setHumours] = useState<IHumour[]>(humoursProps)
+    const [humours, setHumours] = useState<IHumour[]>(humoursProps)
+    const [humourAlreadySended, sethumourAlreadySended] = useState(false)
     const [humourStatus, setHumourStatus] = useState(EHumourStatus.Emotionless)
     const [sendComment, setSendComment] = useState(true);
     const [comment, setComment] = useState(String);
+
+    useEffect(() => {
+        let humourTodayAlreadySended = humours.find(x => x.refUser == "refUser")
+        if (humourTodayAlreadySended)
+            sethumourAlreadySended(true);
+    }, [])
 
     useEffect(() => {
         if (!sendComment) {
@@ -23,14 +33,9 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
         GetHumoursByUser().then(response => setHumours(response.data))
     }
 
-    return (
-        <div className=" m-2 flex flex-col items-center ">
-            <h1 className="text-DARK_GRAY font-normal text-3xl mb-5">Humour</h1>
-            <HumourRating
-                humourStatus={humourStatus}
-                setHumourStatus={setHumourStatus}
-            />
-            <div className="flex flex-row m-4 items-center ">
+    function LoadSendHumourForm() {
+        return (
+            <><div className="flex flex-row m-4 items-center ">
                 <div className="mx-4">
                     <CheckBox
                         title={"Enviar Comentário"}
@@ -41,28 +46,47 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
                 <button
                     type="button"
                     className="bg-LIGHT_BLUE
-                            text-base
-                            font-semibold
-                          text-WHITE
-                            rounded-lg
-                            w-24 h-10
-                            text-center"
+                    text-base
+                    font-semibold
+                  text-WHITE
+                    rounded-lg
+                    w-24 h-10
+                    text-center"
                     onClick={() => SendHumorHandle()}
                 >
                     Enviar
                 </button>
             </div>
-            {sendComment && (
-                <textarea
-                    className="bg-LIGHT_GRAY mt-2 p-2 mb-8 max-w-md"
-                    cols={40} rows={5} placeholder="Informe aqui seu comentário..."
-                    onChange={event => setComment(event.target.value)} />
-            )}
+                {sendComment && (
+                    <textarea
+                        className="bg-LIGHT_GRAY mt-2 p-2 mb-8 max-w-md"
+                        cols={40} rows={5} placeholder="Informe aqui seu comentário..."
+                        onChange={event => setComment(event.target.value)} />
+                )}
+            </>)
+    }
 
-            <p className="mb-4 text-DARK_GRAY">O que está rolando</p>
+    return (
+        <div className=" m-2 flex flex-col items-center ">
+            <h1 className="text-DARK_GRAY font-normal text-3xl mb-5">Humour</h1>
+            <HumourRating
+                humourStatus={humourStatus}
+                setHumourStatus={setHumourStatus}
+            />
+
+            {!humourAlreadySended ? (LoadSendHumourForm()) :
+                (
+                    <div className="m-5 text-GRAY">
+                        <p>Você já enviou seu humor hoje.</p>
+                    </div>
+                )
+            }
+            <div className="w-96">
+                <p className="mb-4 text-DARK_GRAY font-semibold w-full">O que está rolando</p>
+            </div>
 
             <div className="w-full max-w-md" id="humoursList">
-                {humors && humors.map(item => (
+                {humours && humours.map(item => (
                     <div className="flex justify-between bg-LIGHT_GRAY py-2 m-2 px-4 rounded-lg">
                         <p
                             className="text-GRAY"
