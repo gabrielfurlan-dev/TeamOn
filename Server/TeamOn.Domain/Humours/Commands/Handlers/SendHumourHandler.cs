@@ -15,7 +15,7 @@ namespace TeamOn.Domain.Humours.Commands.Handlers
         public ICommandResult Handle(SendHumourCommand command)
         {
             if (!command.Validate())
-                return new GenericCommandResult(data: null, success: false, "Command Inválido.");
+                return new GenericCommandResult(data: null, success: false, "Command inválido.");
 
             try
             {
