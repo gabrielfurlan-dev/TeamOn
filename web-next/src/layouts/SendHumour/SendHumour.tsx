@@ -5,6 +5,7 @@ import HumourRating from "../../components/HumourRating/HumourRating";
 import { IHumour, SendHumourProps } from "@/Interfaces/Humour";
 import Humours from '@/assets/humours'
 import { GetHumoursByUser, SendHumour } from "@/hooks/useHumors";
+import { Check } from "phosphor-react";
 
 
 
@@ -35,28 +36,34 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
 
     function LoadSendHumourForm() {
         return (
-            <><div className="flex flex-row m-4 items-center ">
-                <div className="mx-4">
-                    <CheckBox
-                        title={"Enviar Comentário"}
-                        checked={sendComment}
-                        setChecked={setSendComment}
-                    />
-                </div>
-                <button
-                    type="button"
-                    className="bg-LIGHT_BLUE
+            <>
+                <HumourRating
+                    humourStatus={humourStatus}
+                    setHumourStatus={setHumourStatus}
+                />
+
+                <div className="flex flex-row m-4 items-center ">
+                    <div className="mx-4">
+                        <CheckBox
+                            title={"Enviar Comentário"}
+                            checked={sendComment}
+                            setChecked={setSendComment}
+                        />
+                    </div>
+                    <button
+                        type="button"
+                        className="bg-LIGHT_BLUE
                     text-base
                     font-semibold
                   text-WHITE
                     rounded-lg
                     w-24 h-10
                     text-center"
-                    onClick={() => SendHumorHandle()}
-                >
-                    Enviar
-                </button>
-            </div>
+                        onClick={() => SendHumorHandle()}
+                    >
+                        Enviar
+                    </button>
+                </div>
                 {sendComment && (
                     <textarea
                         className="bg-LIGHT_GRAY mt-2 p-2 mb-8 max-w-md"
@@ -68,15 +75,12 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
 
     return (
         <div className=" m-2 flex flex-col items-center ">
-            <h1 className="text-DARK_GRAY font-normal text-3xl mb-5">Humour</h1>
-            <HumourRating
-                humourStatus={humourStatus}
-                setHumourStatus={setHumourStatus}
-            />
+            <h1 className="text-DARK_GRAY font-normal text-3xl mb-5 mt-20">Humours</h1>
 
             {!humourAlreadySended ? (LoadSendHumourForm()) :
                 (
-                    <div className="m-5 text-GRAY">
+                    <div className="mb-10 mt-2 text-lg text-GRAY flex flex-row">
+                        <Check size={24} weight="bold" className="pr-2" />
                         <p>Você já enviou seu humor hoje.</p>
                     </div>
                 )
