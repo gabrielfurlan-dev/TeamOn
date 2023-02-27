@@ -26,7 +26,7 @@ builder.Services.AddDbContext<HumourContext>(options => options.UseInMemoryDatab
 builder.Services.AddCors(o => o.AddPolicy("MyPolicy",
                     builder =>
                     {
-                        builder.WithOrigins("http://localhost:3000")
+                        builder.WithOrigins("http://localhost:3000", "http://localhost:5184")
                         .AllowAnyMethod()
                         .AllowAnyHeader();
                     }));

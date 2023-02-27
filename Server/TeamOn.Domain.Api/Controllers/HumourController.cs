@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using TeamOn.Domain.Contracts.Commands;
 using TeamOn.Domain.Humours.Commands.Handlers;
@@ -22,7 +23,14 @@ public class HumourController : ControllerBase
     public IEnumerable<HumourEntity> GetAllHumoursByUser(
         // [FromBody] string refUser
         [FromServices] GetHumourHandler handler)
-        => handler.GetAllByUser("string");
+        => handler.GetAllByUser("refUser");
+
+    [Route("all/todays/company")]
+    [HttpGet]
+    public IEnumerable<HumourEntity> GetTodaysHumoursByCompany(
+        // [FromBody] string companyRef
+        [FromServices] GetTodaysHumoursHandler handler)
+        => handler.GetTodaysHumoursByCompany("refCompany");
 
     [Route("id")]
     [HttpGet]

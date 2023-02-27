@@ -19,7 +19,11 @@ namespace TeamOn.Domain.Humours.Commands.Handlers
 
             try
             {
-                var humour = new HumourEntity(command.HumourStatus, command.RefUser, command.Message);
+                var humour = new HumourEntity(command.HumourStatus,
+                                              command.RefUser,
+                                              command.Message,
+                                              command.RefCompany);
+                                              
                 _repository.SendTodaysHumour(humour);
 
                 return new GenericCommandResult(data: null, success: true, "Humor enviado.");

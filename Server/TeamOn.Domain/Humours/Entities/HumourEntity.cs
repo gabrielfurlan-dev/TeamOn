@@ -10,7 +10,8 @@ namespace TeamOn.Domain.Humours.Entities
     {
         public HumourEntity(EHumourStatus humourStatus,
                            string refUser,
-                           string message)
+                           string message,
+                           string refCompany)
         {
             Id = Guid.NewGuid().ToString();
             SendDate = DateTime.Now;
@@ -18,6 +19,7 @@ namespace TeamOn.Domain.Humours.Entities
             HumourStatus = humourStatus;
             RefUser = refUser;
             Message = message;
+            RefCompany = refCompany;
         }
 
         [Key]
@@ -25,6 +27,7 @@ namespace TeamOn.Domain.Humours.Entities
         public DateTime SendDate { get; private set; }
         public EHumourStatus HumourStatus { get; private set; }
         public string RefUser { get; private set; }
+        public string RefCompany { get; private set; }
         public string Message { get; private set; }
     }
 }

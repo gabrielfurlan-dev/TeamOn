@@ -3,6 +3,7 @@ export interface IHumour {
     sendDate: string;
     humourStatus: number;
     refUser: string;
+    refCompany: string;
     message: string;
 }
 

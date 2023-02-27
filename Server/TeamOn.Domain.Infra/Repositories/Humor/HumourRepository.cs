@@ -14,6 +14,12 @@ namespace TeamOn.Domain.Infra.Repositories.Humour
         public IEnumerable<HumourEntity> GetAllByUser(string refUser)
             => _dataContext.Humours.Where(x => x.RefUser == refUser).OrderBy(x => x.SendDate);
 
+        public IEnumerable<HumourEntity> GetTodaysHumourByCompany(string refCompany)
+            => _dataContext.Humours
+                .Where(x => x.RefCompany == refCompany)
+                .Where(x => x.SendDate.Year == DateTime.Now.Year)
+                .OrderBy(x => x.SendDate);
+
         public void SendTodaysHumour(HumourEntity humour)
         {
             _dataContext.Add(humour);

@@ -26,7 +26,12 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
     }, [sendComment]);
 
     function SendHumorHandle(): void {
-        SendHumour(humourStatus, comment, "Teste");
+        if (humors.length > 1) {
+            sweetAlert("Ooops!", "Você já enviou o seu humor hoje.", "error");
+            return;
+        }
+
+        SendHumour(humourStatus, comment, "refUser", "refCompany");
         GetHumoursByUser().then(response => setHumours(response.data))
     }
 

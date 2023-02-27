@@ -9,15 +9,18 @@ namespace TeamOn.Domain.Humours.Commands.Inputs
     {
         public SendHumourCommand(EHumourStatus humourStatus,
                                 string refUser,
-                                string message)
+                                string message,
+                                string refCompany)
         {
             HumourStatus = humourStatus;
             RefUser = refUser;
             Message = message;
+            RefCompany = refCompany;
         }
 
         public EHumourStatus HumourStatus { get; private set; }
         public string RefUser { get; private set; }
+        public string RefCompany { get; private set; }
         public string Message { get; private set; }
 
         public override bool Validate()
