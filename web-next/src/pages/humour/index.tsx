@@ -9,13 +9,13 @@ export default function Humour({ humours }: InferGetServerSidePropsType<typeof g
     return (<SendHumourComponent humours={humours} />)
 }
 
-export async function SendHumour(humourStatus: EHumourStatus, message: string, refUser: string) {
+export async function SendHumour(humourStatus: EHumourStatus, message: string, refUser: string): Promise<void> {
     try {
-        await api.post("humour/send",
+        await api.post("/humour/send",
             {
                 humourStatus: humourStatus,
                 message: message,
-                refUser: "String"
+                refUser: "string"
             }
         )
     } catch (error) {
@@ -24,7 +24,6 @@ export async function SendHumour(humourStatus: EHumourStatus, message: string, r
 }
 
 export const getServerSideProps: GetServerSideProps<SendHumourProps> = async (context: GetServerSidePropsContext) => {
-
     const { data: humours } = await api.get<IHumour[]>('humour/all/user')
 
     return {

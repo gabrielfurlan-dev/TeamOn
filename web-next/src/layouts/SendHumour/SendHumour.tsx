@@ -2,12 +2,19 @@ import CheckBox from "../../components/CheckBox/CheckBox";
 import { EHumourStatus as EHumourStatus } from "../../enums/EHumourStatus";
 import { useEffect, useState } from "react";
 import HumourRating from "../../components/HumourRating/HumourRating";
-import { SendHumourProps } from "@/Interfaces/Humour";
+import { IHumour, SendHumourProps } from "@/Interfaces/Humour";
 import Humours from '@/assets/humours'
 import { SendHumour } from "@/pages/humour";
+import api from "@/lib/axios";
+import { AxiosResponse } from "axios";
+
+
+export async function GetHumoursByUser(): Promise<AxiosResponse<IHumour[]>> {
+    return await api.get<IHumour[]>('humour/all/user');
+}
 
 function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
-
+    const [humors, setHumours] = useState<IHumour[]>(humoursProps)
     const [humourStatus, setHumourStatus] = useState(EHumourStatus.Emotionless)
     const [sendComment, setSendComment] = useState(true);
     const [comment, setComment] = useState(String);
@@ -20,6 +27,7 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
 
     function SendHumorHandle(): void {
         SendHumour(humourStatus, comment, "Teste");
+        GetHumoursByUser().then(response => setHumours(response.data))
     }
 
     return (
@@ -61,7 +69,7 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
             <p className="mb-4 text-DARK_GRAY">O que está rolando</p>
 
             <div className="w-full max-w-md">
-                {humoursProps && humoursProps.map(item => (
+                {humors && humors.map(item => (
                     <div className="flex justify-between bg-LIGHT_GRAY py-2 m-2 px-4 rounded-lg">
                         <p
                             className="text-GRAY"
