@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jcDPMD3OWK4Y1Fn9FfxkGA9+Z5VAEw20tXsOhGPOEotLj6mxTkX/ZXDNqxwXmPlU4tfB3cYwB52SVa4HEJ0LcQ==",
+  "dgSpecHash": "8VkdET3rTpn6VDqHBgd/h+RYQXpyEatOVQUYpYDhuJ7xQle+HS73ts3czXXuTZ1VtCOw/sedRhXtc2J7kWlgjA==",
   "success": true,
   "projectFilePath": "C:\\dev\\TeamOn\\Server\\TeamOn.Domain.Api\\TeamOn.Domain.Api.csproj",
   "expectedPackageFiles": [
@@ -82,6 +82,7 @@
     "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\system.net.http\\4.3.0\\system.net.http.4.3.0.nupkg.sha512",
     "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\system.net.sockets\\4.3.0\\system.net.sockets.4.3.0.nupkg.sha512",
+    "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\system.net.websockets\\4.3.0\\system.net.websockets.4.3.0.nupkg.sha512",
     "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\system.objectmodel\\4.3.0\\system.objectmodel.4.3.0.nupkg.sha512",
     "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\system.private.uri\\4.3.2\\system.private.uri.4.3.2.nupkg.sha512",
     "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\system.reactive\\4.3.2\\system.reactive.4.3.2.nupkg.sha512",
