@@ -1,10 +1,11 @@
 using System.Text;
 using System.Net;
 using Microsoft.EntityFrameworkCore;
-using TeamOn.Infra;
-using TeamOn.Domain;
-
 using System.Net.WebSockets;
+using TeamOn.Domain.Humours.Repositories;
+using TeamOn.Infra.Repositories.Humour;
+using TeamOn.Domain.Humours.Commands.Handlers;
+using TeamOn.Infra.Contexts;
 
 DotNetEnv.Env.Load();
 
@@ -13,7 +14,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
 builder.Services.AddTransient<IHumourRepository, HumourRepository>();
 builder.Services.AddTransient<SendHumourHandler, SendHumourHandler>();
 builder.Services.AddTransient<GetHumourHandler, GetHumourHandler>();
@@ -23,7 +23,6 @@ builder.Services.AddTransient<GetTodaysHumoursHandler, GetTodaysHumoursHandler>(
 //     => options.UseNpgsql(builder.Configuration.GetConnectionString(System.Environment.GetEnvironmentVariable("SUPABASE_CONNECTION_STRING"))));
 
 builder.Services.AddDbContext<HumourContext>(options => options.UseInMemoryDatabase("Database"));
-
 
 builder.Services.AddCors(o => o.AddPolicy("MyPolicy",
                     builder =>
@@ -70,4 +69,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
 // app.RunAsync();

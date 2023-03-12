@@ -5,8 +5,7 @@ namespace TeamOn.Infra.Contexts
 {
     public class HumourContext : DbContext
     {
-        public HumourContext() { }
-        public HumourContext(DbContextOptions<HumourContext> options) : base(options) { }
+        public HumourContext(DbContextOptions<HumourContext> options) : base(options) {}
 
         public DbSet<HumourEntity> Humours { get; set; }
 
