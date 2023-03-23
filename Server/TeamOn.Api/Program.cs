@@ -6,6 +6,7 @@ using TeamOn.Domain.Humours.Repositories;
 using TeamOn.Infra.Repositories.Humour;
 using TeamOn.Domain.Humours.Commands.Handlers;
 using TeamOn.Infra.Contexts;
+using TeamOn.Api.Hubs;
 
 DotNetEnv.Env.Load();
 
@@ -29,30 +30,19 @@ builder.Services.AddCors(o => o.AddPolicy("MyPolicy",
                     {
                         builder.WithOrigins("http://localhost:3000", "http://localhost:5184")
                         .AllowAnyMethod()
-                        .AllowAnyHeader();
+                        .AllowAnyHeader()
+                        .AllowCredentials();
                     }));
+
+builder.Services.AddSignalR();
 
 var app = builder.Build();
 
-app.UseWebSockets();
-
-app.Map("/realtime-humours", requestDelegate: async context =>
+app.Use((context, next) =>
 {
-    if(!context.WebSockets.IsWebSocketRequest)
-        context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
-    else
-    {
-        using var webSocket = context.WebSockets.AcceptWebSocketAsync();
-
-        var data = Encoding.ASCII.GetBytes($".NET Rocks -> {DateTime.Now}");
-
-        await webSocket.Result.SendAsync(data,
-                                WebSocketMessageType.Text,
-                                endOfMessage: true,
-                                CancellationToken.None);
-    }
+    context.Request.Scheme = "https";
+    return next();
 });
-
 
 app.UseCors("MyPolicy");
 
@@ -62,12 +52,18 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+app.UseRouting();
 
 app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+    endpoints.MapHub<TimeHub>("/timehub");
+    endpoints.MapHub<ChatHub>("/chathub");
+    endpoints.MapHub<MeuHub>("/meu-hub");
+});
 
-// app.RunAsync();
+app.Run();
