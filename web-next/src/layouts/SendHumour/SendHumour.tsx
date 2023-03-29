@@ -7,9 +7,6 @@ import Humours from '@/assets/humours'
 import { GetHumoursByUser, SendHumour } from "@/hooks/useHumors";
 import { Check } from "phosphor-react";
 
-
-
-
 function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
     const [humours, setHumours] = useState<IHumour[]>(humoursProps)
     const [humourAlreadySended, sethumourAlreadySended] = useState(false)
@@ -74,6 +71,7 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
     }
 
     return (
+
         <div className=" m-2 flex flex-col items-center ">
             <h1 className="text-DARK_GRAY font-normal text-3xl mb-5 mt-20">Humours</h1>
 
