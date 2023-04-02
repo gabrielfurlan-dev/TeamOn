@@ -11,7 +11,7 @@ export const NavBar = () => {
                 </div>
             <ul >
                 <li className='m-8'>
-                    <a href='/'>
+                    <a href='/home'>
                         <House size={32}/>
                     </a>
                 </li>
