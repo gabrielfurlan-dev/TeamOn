@@ -7,25 +7,14 @@ interface ToggleButtonProps {
 }
 
 const ToggleButton: React.FC<ToggleButtonProps> = ({ onToggle, isOn }) => {
-  const [isHovering, setIsHovering] = useState(false);
 
-  const handleClick = () => {
-    onToggle();
-  };
-
-  const handleMouseEnter = () => {
-    setIsHovering(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovering(false);
-  };
+    const [isHovering, setIsHovering] = useState(false);
 
   return (
     <button
-      onClick={handleClick}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onClick={() => onToggle()}
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
       className="bg-transparent focus:outline-none"
     >
       {isOn ? (
