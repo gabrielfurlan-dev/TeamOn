@@ -17,10 +17,10 @@ export function TopBar() {
 
             <div className='m-4 grid lg:grid-cols-5 grid-row-1 gap-3 h-full'>
                 <Card color={'bg-DARK_BLUE'} title={'Colaboradores'} icon={Users} url='' />
-                <Card color={'bg-GREEN'} title={'Colaboradores'} icon={Storefront} url='' />
-                <Card color={'bg-DARK_YELLOW'} title={'Colaboradores'} icon={Megaphone} url='' />
-                <Card color={'bg-LIGHT_BLUE'} title={'Colaboradores'} icon={Rocket} url='' />
-                <Card color={'bg-RED'} title={'Colaboradores'} icon={Calendar} url='' />
+                <Card color={'bg-GREEN'} title={'Bazar'} icon={Storefront} url='' />
+                <Card color={'bg-DARK_YELLOW'} title={'comunicados'} icon={Megaphone} url='' />
+                <Card color={'bg-LIGHT_BLUE'} title={'PDI'} icon={Rocket} url='' />
+                <Card color={'bg-RED'} title={'Agenda'} icon={Calendar} url='' />
             </div>
         </div >
     );
