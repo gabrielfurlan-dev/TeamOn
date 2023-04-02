@@ -11,7 +11,7 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
     const [humours, setHumours] = useState<IHumour[]>(humoursProps)
     const [humourAlreadySended, sethumourAlreadySended] = useState(false)
     const [humourStatus, setHumourStatus] = useState(EHumourStatus.Emotionless)
-    const [sendComment, setSendComment] = useState(true);
+    const [sendComment, setSendComment] = useState(false);
     const [comment, setComment] = useState(String);
 
     useEffect(() => {
@@ -63,7 +63,7 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
                 </div>
                 {sendComment && (
                     <textarea
-                        className="bg-LIGHT_GRAY mt-2 p-2 mb-8 max-w-md"
+                        className="bg-LIGHT_GRAY mt-2 p-4 mb-8 max-w-md rounded-lg"
                         cols={40} rows={5} placeholder="Informe aqui seu comentário..."
                         onChange={event => setComment(event.target.value)} />
                 )}
@@ -72,7 +72,7 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
 
     return (
 
-        <div className=" m-2 flex flex-col items-center ">
+        <div className=" m-2 flex flex-col items-center w-full">
             <h1 className="text-DARK_GRAY font-normal text-3xl mb-5 mt-20">Humours</h1>
 
             {!humourAlreadySended ? (LoadSendHumourForm()) :
@@ -83,26 +83,27 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
                     </div>
                 )
             }
-            <div className="w-96">
-                <p className="mb-4 text-DARK_GRAY font-semibold w-full">O que está rolando</p>
-            </div>
+            <div className="w-full flex flex-col items-center">
 
-            <div className="w-full max-w-md" id="humoursList">
-                {humours && humours.map(item => (
-                    <div className="flex justify-between bg-LIGHT_GRAY py-2 m-2 px-4 rounded-lg">
-                        <p
-                            className="text-GRAY"
-                            key={item.id}>
-                            {`${item.refUser} enviou seu humor hoje!`}
-                        </p>
-                        <div className="mx-4 mt-1">
-                            <Humours />
+                <div className="">
+                    <p className="mb-4 mt-4 text-DARK_GRAY font-semibold w-full">O que está rolando</p>
+                </div>
+
+                <div className="w-full mt-10 max-w-md" id="humoursList">
+                    {humours.length != 0 ? humours.map(item => (
+                        <div className="flex justify-between bg-LIGHT_GRAY py-2 m-2 px-4 rounded-lg">
+                            <p
+                                className="text-GRAY"
+                                key={item.id}>
+                                {`${item.refUser} enviou seu humor hoje!`}
+                            </p>
+                            <div className="mx-4 mt-1">
+                                <Humours />
+                            </div>
                         </div>
-                    </div>
-
-                ))}
+                    )) : <p className="bg-LIGHT_GRAY p-4 text-center rounded-lg">Ninguem enviou o humor hoje.</p>}
+                </div>
             </div>
-
         </div>
     )
 }
