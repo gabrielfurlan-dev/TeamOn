@@ -1,8 +1,3 @@
-# Sumário
-1. [Sobre](https://github.com/gabrielfurlan-dev/TeamOn/edit/master/README.md#sobre)
-2. [Tecnologias_utilizadas](https://github.com/gabrielfurlan-dev/TeamOn/edit/master/README.md#tecnologias-utilizadas)
-3. [Como executar a aplicação](https://github.com/gabrielfurlan-dev/TeamOn/edit/master/README.md#como-executar-a-aplica%C3%A7%C3%A3o)
-
 ## Sobre
 
 TeamOn é uma plataforma para colaboradores de corporações com recursos e funcionalidades úteis tanto para os colaboradores quanto aos gestores.
@@ -28,4 +23,6 @@ Todo o protótipo pode ser visto acessando o projeto no [figma](https://www.figm
 - Frameworks:
     - Next.Js
     - Tailwind CSS
+    - SweetAlert    
     - Radix (breve)
+    

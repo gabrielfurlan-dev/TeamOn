@@ -19,7 +19,7 @@ namespace TeamOn.Domain.Humours.Commands.Handlers
             }
             catch (Exception ex)
             {
-                throw new Exception("Não foi possível obter as emoções de hoje. : " + ex.Message);
+                throw new Exception("Não foi possível obter as emoções de hoje. Erro: " + ex.Message);
             }
         }
     }

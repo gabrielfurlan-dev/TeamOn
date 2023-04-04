@@ -6,6 +6,12 @@ namespace TeamOn.Domain.Users.Commands.Inputs
 {
     public class GetUserByIdCommand : ICommandContract
     {
+        public GetUserByIdCommand(string userID, string companyId)
+        {
+            UserID = userID;
+            CompanyId = companyId;
+        }
+
         public string UserID { get; set; }
         public string CompanyId { get; set; }
 

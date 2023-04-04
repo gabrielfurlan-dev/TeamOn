@@ -6,6 +6,9 @@ namespace TeamOn.Domain.Users.Commands.Inputs
 {
     public class GetAllUsersCommand : ICommandContract
     {
+        public GetAllUsersCommand(string companyId) 
+            => CompanyId = companyId;
+
         public string CompanyId { get; set; }
 
         public override bool Validate()

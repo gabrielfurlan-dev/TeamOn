@@ -11,6 +11,7 @@ import {
 import { useRouter } from "next/router";
 
 
+import { NavBar } from "@/layouts/NavBar/NavBar"
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
     const [supabaseClient] = useState(() => createBrowserSupabaseClient());
@@ -20,10 +21,13 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
             supabaseClient={supabaseClient}
             initialSession={pageProps.initialSession}
         >
+            <div className="flex col">
+             <NavBar />
             <ThemeProvider theme={theme}>
                 <Component {...pageProps} />
                 <GlobalStyle />
             </ThemeProvider>
+            </div>
         </SessionContextProvider>
     );
 };

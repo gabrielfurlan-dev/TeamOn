@@ -8,8 +8,7 @@ export default function Humour({ humours }: InferGetServerSidePropsType<typeof g
 }
 
 export const getServerSideProps: GetServerSideProps<SendHumourProps> = async (context: GetServerSidePropsContext) => {
-
-    const { data: humours } = await api.get<IHumour[]>('humour/all/user')
+    const { data: humours } = await api.get<IHumour[]>('humour/all/todays/company')
 
     return {
         props: {

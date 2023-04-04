@@ -7,6 +7,15 @@ namespace TeamOn.Domain.Users.Commands.Inputs
 {
     public class CreateUserCommand : ICommandContract
     {
+        public CreateUserCommand(string name, string occupation, string biography, string email, List<string> skills)
+        {
+            Name = name;
+            Occupation = occupation;
+            Biography = biography;
+            Email = email;
+            Skills = skills;
+        }
+
         public string Name { get; set; }
         public string Occupation { get; set; }
         public string Biography { get; set; }

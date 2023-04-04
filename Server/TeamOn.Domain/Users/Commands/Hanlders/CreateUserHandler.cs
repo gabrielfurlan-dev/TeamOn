@@ -9,12 +9,12 @@ namespace TeamOn.Domain.Users.Commands.Hanlders
     {
         IUserRepository _repository;
 
-        public CreateUserHandler(IUserRepository repository) 
+        public CreateUserHandler(IUserRepository repository)
             => _repository = repository;
 
         public ICommandResult Handle(CreateUserCommand command)
         {
-            if (command.Validate())
+            if (!command.Validate())
                 return new GenericCommandResult(null, false, "Command não é válido.");
 
             try

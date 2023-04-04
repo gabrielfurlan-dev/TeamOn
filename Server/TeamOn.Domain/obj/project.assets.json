@@ -34,24 +34,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\": {}
+    "C:\\Users\\gabri\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\TeamOn\\server\\TeamOn.Domain\\TeamOn.Domain.csproj",
+      "projectUniqueName": "C:\\dev\\GitHub\\TeamOn\\Server\\TeamOn.Domain\\TeamOn.Domain.csproj",
       "projectName": "TeamOn.Domain",
-      "projectPath": "C:\\dev\\TeamOn\\server\\TeamOn.Domain\\TeamOn.Domain.csproj",
-      "packagesPath": "C:\\Users\\Gabriel Furlan\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\TeamOn\\server\\TeamOn.Domain\\obj\\",
+      "projectPath": "C:\\dev\\GitHub\\TeamOn\\Server\\TeamOn.Domain\\TeamOn.Domain.csproj",
+      "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
+      "outputPath": "C:\\dev\\GitHub\\TeamOn\\Server\\TeamOn.Domain\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Gabriel Furlan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -91,7 +98,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
