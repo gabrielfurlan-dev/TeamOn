@@ -4,7 +4,7 @@ import api from "@/lib/axios"
 import { GetServerSideProps, GetServerSidePropsContext, InferGetServerSidePropsType } from "next"
 
 export default function Humour({ humours }: InferGetServerSidePropsType<typeof getServerSideProps>) {
-    return (<SendHumourComponent humours={humours} />)
+    return ( <SendHumourComponent humours={humours} /> );
 }
 
 export const getServerSideProps: GetServerSideProps<SendHumourProps> = async (context: GetServerSidePropsContext) => {
