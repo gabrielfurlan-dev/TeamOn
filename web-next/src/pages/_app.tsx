@@ -1,22 +1,25 @@
-import React from "react";
-import type { AppProps } from "next/app";
-import GlobalStyle from "../styles/globals";
-import { ThemeProvider } from "styled-components";
-import theme from "@/styles/theme";
+//* Libraries imports
 import { useState } from "react";
+import { ThemeProvider } from "styled-components";
 import { createBrowserSupabaseClient } from "@supabase/auth-helpers-nextjs";
-import {
-    SessionContextProvider, useSupabaseClient
-} from "@supabase/auth-helpers-react";
+import { SessionContextProvider } from "@supabase/auth-helpers-react";
 
-const App: React.FC<AppProps> = ({ Component, pageProps }) => {
-    const [supabaseClient] = useState(() => createBrowserSupabaseClient());
+//* Types imports
+import type { AppProps } from "next/app";
+
+//* Local imports
+import theme from "@/styles/theme";
+import GlobalStyle from "../styles/globals";
+
+export default function App({ Component, pageProps }: AppProps) {
+    const [supabaseClient] = useState(() => createBrowserSupabaseClient())
 
     return (
         <SessionContextProvider
             supabaseClient={supabaseClient}
             initialSession={pageProps.initialSession}
         >
+            {/* criminoso, não use divs no _app.tsx */}
             <div className="flex col">
                 <ThemeProvider theme={theme}>
                     <Component {...pageProps} />
@@ -26,5 +29,3 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
         </SessionContextProvider>
     );
 };
-
-export default App;

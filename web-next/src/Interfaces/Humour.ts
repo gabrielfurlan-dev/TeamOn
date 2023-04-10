@@ -1,4 +1,4 @@
-export interface IHumour {
+export type IHumour = {
     id: string;
     sendDate: string;
     humourStatus: number;

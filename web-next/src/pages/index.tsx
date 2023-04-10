@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { Session } from "@supabase/auth-helpers-nextjs";
 
-const Home: React.FC = () => {
+export default function Home() {
     // Retrieve provider_token & logged in user's third-party id from metadata
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -46,5 +46,3 @@ const Home: React.FC = () => {
         </div>
     );
 };
-
-export default Home;
