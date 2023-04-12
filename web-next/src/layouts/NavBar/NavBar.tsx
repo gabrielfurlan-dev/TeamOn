@@ -11,7 +11,12 @@ export const NavBar = ({ children }: NavBarProps) => {
 
     return (
         <>
-            <div className='h-screen w-20 bg-white flex flex-col justify-between shadow-lg items-center py-9' >
+            <div className='
+                    h-screen w-20
+                    bg-white dark:bg-black
+                    dark:text-DARK_THEME_TEXT
+                    flex flex-col justify-between
+                    shadow-lg items-center py-9' >
                 <div>
                     <Logo height={32} width={32} />
                 </div>
@@ -21,6 +26,7 @@ export const NavBar = ({ children }: NavBarProps) => {
                             <House size={32} />
                         </Link>
                     </li>
+
                     <li className='m-8'>
                         <Link href='/'>
                             <Confetti size={32} />
