@@ -56,9 +56,9 @@ export default function Login() {
             <div className="w-5/12 h-10/12">
                 <div className="flex flex-col h-full w-full items-center">
                     <div className=" mt-4 flex items-start w-2/3 flex-col">
-                        {/* <div className="mt">
+                        <div className="mt">
                         <Logo width={30} height={30} />
-                        </div> */}
+                        </div>
 
                         <h1 className=" font-normal leading-7 text-4xl mt-8">
                             Bem-vindo
