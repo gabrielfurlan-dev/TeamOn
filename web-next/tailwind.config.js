@@ -3,6 +3,7 @@ module.exports = {
     content: [
         "./src/**/*.{js,ts,jsx,tsx}",
     ],
+    darkMode: 'class',
     theme: {
         extend: {
           colors: {
@@ -13,14 +14,23 @@ module.exports = {
             GRAY: '#888888',
             DARK_GRAY: '#646464',
             BLACK: '#222222',
-
             GREEN : '#00C44B',
-
             RED: '#F35757',
             LIGHT_BLUE: '#0FA0E3',
             DARK_BLUE: '#5045E6',
             LIGHT_YELLOW: '#FFCC4D',
-            DARK_YELLOW: '#FFAC33'
+            DARK_YELLOW: '#FFAC33',
+
+            DARK_THEME_TITLE: '#FFFFFF',
+            DARK_THEME_TEXT: '#D9D9D9',
+            DARK_THEME_BACKGROUND: '#1F1F1F',
+            DARK_THEME_BACKGROUND_SECONDARY: '#000000',
+
+            LIGHT_THEME_TITLE: '#222222',
+            LIGHT_THEME_TEXT: '#646464',
+
+            LIGHT_THEME_BACKGROUND: '#FFFFFF',
+            LIGHT_THEME_BACKGROUND_SECONDARY: '#F6F6F6'
           }
         },
     },

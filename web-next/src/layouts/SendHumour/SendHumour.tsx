@@ -63,7 +63,7 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
                 </div>
                 {sendComment && (
                     <textarea
-                        className="bg-LIGHT_GRAY mt-2 p-4 mb-8 max-w-md rounded-lg"
+                        className="bg-LIGHT_GRAY dark:bg-DARK_THEME_BACKGROUND mt-2 p-4 mb-8 max-w-md rounded-lg"
                         cols={40} rows={5} placeholder="Informe aqui seu comentário..."
                         onChange={event => setComment(event.target.value)} />
                 )}
@@ -73,7 +73,7 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
     return (
 
         <div className=" m-2 flex flex-col items-center w-full">
-            <h1 className="text-DARK_GRAY font-normal text-3xl mb-5 mt-20">Humours</h1>
+            <h1 className="text-DARK_GRAY dark:text-DARK_THEME_TEXT font-normal text-3xl mb-5 mt-20">Humours</h1>
 
             {!humourAlreadySended ? (LoadSendHumourForm()) :
                 (
@@ -86,7 +86,7 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
             <div className="w-full flex flex-col items-center">
 
                 <div className="">
-                    <p className="mb-4 mt-4 text-DARK_GRAY font-semibold w-full">O que está rolando</p>
+                    <p className="mt-10 text-DARK_GRAY dark:text-DARK_THEME_TEXT font-semibold w-full">O que está rolando</p>
                 </div>
 
                 <div className="w-full mt-10 max-w-md" id="humoursList">
@@ -101,7 +101,7 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
                                 <Humours />
                             </div>
                         </div>
-                    )) : <p className="bg-LIGHT_GRAY p-4 text-center rounded-lg">Ninguem enviou o humor hoje.</p>}
+                    )) : <p className="bg-LIGHT_GRAY dark:bg-DARK_THEME_BACKGROUND p-4 text-center rounded-lg">Ninguem enviou o humor hoje.</p>}
                 </div>
             </div>
         </div>

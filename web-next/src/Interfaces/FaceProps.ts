@@ -4,4 +4,5 @@ export interface FacesProps {
     width?: number;
     height?: number;
     humour?: EHumourStatus;
+    strokeColor: string;
 }

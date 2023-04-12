@@ -20,19 +20,23 @@ export default function Home({ humours }: InferGetServerSidePropsType<typeof get
     return (
 
         <NavBar>
-            <div className='bg-LIGHT_GRAY h-screen w-screen'>
+            <div className='bg-LIGHT_THEME_BACKGROUND_SECONDARY dark:bg-DARK_THEME_BACKGROUND
+                            dark:text-DARK_THEME_TEXT
+                             h-screen w-screen'>
 
-                <div className='bg-WHITE mt-4 mr-4 ml-4 lg:h-1/4 rounded-xl'>
+                <div className='bg-LIGHT_THEME_BACKGROUND dark:bg-DARK_THEME_BACKGROUND_SECONDARY
+                                mt-4 mr-4 ml-4 lg:h-1/4 rounded-xl'>
                     <TopBar />
                 </div>
 
                 <div className='flex  lg:flex-row flex-col lg:h-[73%]' >
 
-                    <div className='bg-WHITE m-4 lg:w-8/12 rounded-xl' >
+                    <div className='bg-LIGHT_THEME_BACKGROUND dark:bg-DARK_THEME_BACKGROUND_SECONDARY
+                                     m-4 lg:w-8/12 rounded-xl' >
                         <Humour humours={humours} />
                     </div>
 
-                    <div className='bg-WHITE
+                    <div className='bg-LIGHT_THEME_BACKGROUND dark:bg-DARK_THEME_BACKGROUND_SECONDARY
                                   lg:mt-4 lg:ml-0
                                   mx-4 mb-4
                                   lg:w-4/12

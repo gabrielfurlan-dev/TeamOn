@@ -1,29 +1,29 @@
-import { IconProps } from 'phosphor-react';
-import React from 'react';
+import { CheckSquare, IconProps } from 'phosphor-react';
+import React, { HTMLAttributes } from 'react';
 
 interface CardProps {
-    color: string,
+    className?: string,
+
     title: string,
     url: string,
     icon: React.ForwardRefExoticComponent<IconProps & React.RefAttributes<SVGSVGElement>>
 }
 
-export const Card: React.FC<CardProps> = ({ color, title, url, icon: Icon }) => {
-    let cardClass = `rounded-lg flex flex-col-reverse w-full h-full ${color}`
+export const Card: React.FC<CardProps> = ({ className, title, url, icon: Icon }) => {
+
+    let test = ' rounded-lg flex flex-col-reverse w-full h-full transition-all duration-700'
 
     function NavegarPara(url: string) {
-        // window.location.href=url
-        sweetAlert('Ops!', 'O desenvolvedor está jogando CS e ainda não implementou a função. Pedimos que aguarde até que a partida dele acabe. #RumoAoPrata2 👊😎', 'info');
+        sweetAlert('Ops!', 'Função não implementada.\n Aguarde.', 'info');
     }
-
     return (
-        <div className=''>
+        <div className={className + test}>
             <button
-                className={cardClass}
+            className=' h-full flex flex-col-reverse'
                 onClick={() => NavegarPara(url)}>
                 <div className='flex flex-row m-4 items-center'>
-                    <Icon size={32} color='white' />
-                    <p className='ml-2 font-medium text-white'>{title}</p>
+                    <Icon size={32} className={''} />
+                    <p className={`ml-2 font-semibold dark:bg-inherit`}>{title}</p>
                 </div>
             </button>
         </div>

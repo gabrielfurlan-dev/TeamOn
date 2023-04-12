@@ -5,9 +5,8 @@ import { ThemeProvider } from "styled-components";
 import theme from "@/styles/theme";
 import { useState } from "react";
 import { createBrowserSupabaseClient } from "@supabase/auth-helpers-nextjs";
-import {
-    SessionContextProvider, useSupabaseClient
-} from "@supabase/auth-helpers-react";
+import {SessionContextProvider, useSupabaseClient} from "@supabase/auth-helpers-react";
+import { DarkThemeProvider } from "@/context/ThemeContext";
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
     const [supabaseClient] = useState(() => createBrowserSupabaseClient());
@@ -19,7 +18,9 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
         >
             <div className="flex col">
                 <ThemeProvider theme={theme}>
-                    <Component {...pageProps} />
+                    <DarkThemeProvider>
+                        <Component {...pageProps} />
+                    </DarkThemeProvider>
                     <GlobalStyle />
                 </ThemeProvider>
             </div>
