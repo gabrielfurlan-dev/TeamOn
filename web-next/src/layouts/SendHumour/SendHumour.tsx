@@ -91,9 +91,9 @@ function SendHumourComponent({ humours: humoursProps }: SendHumourProps) {
 
                 <div className="w-full mt-10 max-w-md" id="humoursList">
                     {humours.length != 0 ? humours.map(item => (
-                        <div className="flex justify-between bg-LIGHT_GRAY py-2 m-2 px-4 rounded-lg">
+                        <div className="flex justify-between bg-LIGHT_GRAY dark:bg-DARK_THEME_BACKGROUND py-2 m-2 px-4 rounded-lg">
                             <p
-                                className="text-GRAY"
+                                className="text-GRAY dark:text-DARK_THEME_TEXT"
                                 key={item.id}>
                                 {`${item.refUser} enviou seu humor hoje!`}
                             </p>
