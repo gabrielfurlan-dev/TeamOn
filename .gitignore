@@ -398,3 +398,24 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Next cache and build
+web-next/.next/cache/
+web-next/.next/server/
+web-next/.next/static/
+web-next/.next/trace
+web-next/.next/react-loadable-manifest.json
+web-next/next-env.d.ts
+web-next/.env.local
+
+# .env.local
+web-next/.next/build-manifest.json
+
+# package.json
+web-next/.next/package.json
+
+# C# Server API
+/Server/TeamOn.Domain/bin/Debug/
+Server/TeamOn.Domain/obj/
+Server/TeamOn.Domain/obj/Debug/net7.0/
+Server/TeamOn.Domain/obj/project.nuget.cache
