@@ -1,5 +1,5 @@
-import { CheckSquare, IconProps } from 'phosphor-react';
-import React, { HTMLAttributes } from 'react';
+import {  IconProps } from 'phosphor-react';
+import React from 'react';
 
 interface CardProps {
     className?: string,

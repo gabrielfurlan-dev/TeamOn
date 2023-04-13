@@ -1,20 +1,22 @@
+import { IconProps } from "phosphor-react";
 import { MouseEventHandler } from "react";
 
-export  interface ButtonProps {
-    title: string;
+export interface ButtonProps {
     metodo: MouseEventHandler<HTMLButtonElement>;
-    children?: React.ReactNode;
-    margin?: string;
+    icon: React.ForwardRefExoticComponent<IconProps & React.RefAttributes<SVGSVGElement>>;
 }
 
-export function LoginButton(props: ButtonProps) {
+export function LoginButton({ metodo, icon: Icon }: ButtonProps) {
     return (
         <button
-            onClick={props.metodo}
-            className={`flex flex-row border text-md rounded-3xl w-2/3 py-2 px-2 items-center border-PRINCIPAL_GREEN mt-${props.margin}`}
+            onClick={metodo}
+            className={`flex flex-row
+                        text-md
+                        rounded-lg
+                        py-2 px-2
+                        items-center`}
         >
-           {props.children}
-           {props.title}
+            <Icon size={32} />
         </button>
     );
 }

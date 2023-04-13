@@ -12,6 +12,7 @@ import {
 import { LoginButton } from "@/components/Buttons/LoginButton/LoginButton";
 import Logo from "@/assets/Logo_TeamOn";
 import { useState } from "react";
+import { InputText } from "@/components/Buttons/InputText";
 
 export default function Login() {
     const router = useRouter();
@@ -21,10 +22,10 @@ export default function Login() {
 
     async function signInWithEmail() {
         const { data, error } = await supabase.auth.signInWithPassword({
-          email: email,
-          password: password,
+            email: email,
+            password: password,
         })
-      }
+    }
 
     async function signInWithGitHub() {
         const { data, error } = await supabase.auth.signInWithOAuth({
@@ -52,117 +53,87 @@ export default function Login() {
     }
 
     return (
-        <div className="flex flex-row w-screen h-screen justify-center max-h-[1280px]">
-            <div className="w-5/12 h-10/12">
-                <div className="flex flex-col h-full w-full items-center">
-                    <div className=" mt-4 flex items-start w-2/3 flex-col">
-                        {/* <div className="mt">
-                        <Logo width={30} height={30} />
-                        </div> */}
+        <div className="w-full h-screen flex flex-col">
 
-                        <h1 className=" font-normal leading-7 text-4xl mt-8">
-                            Bem-vindo
-                        </h1>
-                        <h2 className="text-3xl mt-6">
-                            <span className="font-bold">Team</span>on,
-                        </h2>
-                        <p className="leading-6 text-lg">
-                            A plataforma para companhias
-                        </p>
-                    </div>
-
-                    <h1 className="font-bold text-lg text-BLACK mt-6">
-                        Entre para continuar
+            <div className="mt-12 ml-12 flex sm:flex-row flex-col items-center">
+                <div className="mr-4">
+                    <Logo width={32} height={32} />
+                </div>
+                <div>
+                    <h1 className=" font-normal leading-7 text-4xl mt-8">
+                        <span className="font-bold">Team</span>on
                     </h1>
-
-                    <div className="flex flex-col mt-4 w-full items-center focus:border-0">
-                        <input
-                            className=" border border-GRAY text-md rounded-3xl w-2/3 py-2 px-4"
-                            placeholder="email@example.com.br"
-                            type="email"
-                            value={email}
-                            onChange={(event) => setEmail(event.target.value)}
-                        />
-                        <input
-                            className=" mt-5 border border-GRAY text-md rounded-3xl w-2/3 py-2 px-4"
-                            placeholder="**********"
-                            type="password"
-                            value={password}
-                            onChange={(event) => setPassword(event.target.value)}
-                        />
-                    </div>
-
-                    <p className="mt-4 mb-4 leading-6">Or</p>
-
-                    <LoginButton
-                        title="Entrar com Google"
-                        metodo={signInWithGoogle}
-                    >
-                        <GoogleLogo size={32} className="mr-8" />
-                    </LoginButton>
-
-                    <LoginButton
-                        title="Entrar com Discord"
-                        metodo={signInWithDiscord}
-                        margin={"5"}
-                    >
-                        <DiscordLogo size={32} className="mr-8" />
-                    </LoginButton>
-
-                    <LoginButton
-                        title="Entrar com Facebook"
-                        metodo={signInWithFacebook}
-                        margin={"5"}
-                    >
-                        <FacebookLogo size={32} className="mr-8" />
-                    </LoginButton>
-
-                    <LoginButton
-                        title="Entrar com GitHub"
-                        metodo={signInWithGitHub}
-                        margin={"5"}
-                    >
-                        <GithubLogo size={32} className="mr-8" />
-                    </LoginButton>
-
-                    <div className="flex items-center mt-4">
-                        <input
-                            id="link-checkbox"
-                            type="checkbox"
-                            value=""
-                            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                        />
-                        <label
-                            htmlFor="link-checkbox"
-                            className="ml-2 text-md font-medium text-gray-900"
-                        >
-                            I agree with the{" "}
-                            <a
-                                href="#"
-                                className="text-blue-600 dark:text-blue-500 hover:underline"
-                            >
-                                terms and conditions
-                            </a>
-                            .
-                        </label>
-                    </div>
-
-                    <footer className="w-full h-full flex items-end justify-center mb-6">
-                        <p>
-                            Email para contato:{" "}
-                            <strong>contact@teamon.com</strong>
-                        </p>
-                    </footer>
+                    <p className="leading-6 text-lg">
+                        A plataforma para companhias
+                    </p>
                 </div>
             </div>
-            <div className="w-11/12 h-11/12 p-2 flex flex-col items-end justify-center">
-                <Image
-                    src={imageLogin}
-                    className="w-11/12 h-full ml-16"
-                    alt="Imagem de login"
-                    quality={100}
-                />
+
+            <div className=" h-full flex flex-col justify-center">
+
+                <div className="flex flex-col items-center w-full">
+                    <div className=" flex flex-col w-full max-w-screen-sm">
+
+                        <h1 className="font-bold text-3xl text-LIGHT_THEME_TITLE dark:text-DARK_THEME_TITLE text-center">
+                            Entre
+                        </h1>
+
+                        <div className="flex flex-col mt-4 w-full items-center focus:border-0">
+                            <div className="w-full items-center flex flex-col gap-4">
+
+                                <InputText
+                                    placeHolder="email@example.com.br"
+                                    type="email"
+                                    value={email}
+                                    onChange={(event) => setEmail(event.target.value)}
+                                />
+                                <InputText
+                                    placeHolder="**********"
+                                    type="password"
+                                    value={password}
+                                    onChange={(event) => setPassword(event.target.value)}
+                                />
+
+                                <button
+                                    className="bg-GREEN border border-GRAY text-md rounded-lg w-2/3 py-2 px-4"
+                                    onClick={() => signInWithEmail()}
+                                > Continuar com email </button>
+                            </div>
+                        </div>
+
+                        <p className="pt-10 leading-6 text-center">Or</p>
+
+                        <div className="flex justify-center">
+                            <LoginButton metodo={signInWithGoogle} icon={GoogleLogo} />
+                            <LoginButton metodo={signInWithFacebook} icon={FacebookLogo} />
+                            <LoginButton metodo={signInWithDiscord} icon={DiscordLogo} />
+                            <LoginButton metodo={signInWithGitHub} icon={GithubLogo} />
+                        </div>
+
+                        <div className="flex justify-center mt-4 m-20 text-center">
+                            <label
+                                htmlFor="link-checkbox"
+                                className="ml-2 text-md font-medium text-gray-900"
+                            >
+                                Ao continuar você aceita todos os nossos{" "}
+                                <a href="#" className="text-blue-600 underline dark:text-blue-500 hover:underline">
+                                    termos e condições
+                                </a>
+                                .
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
+
+            <footer className="w-full flex items-end justify-center mb-6">
+                <p>
+                    Email para contato:{" "}
+                    <strong>contact@teamon.com</strong>
+                </p>
+            </footer>
         </div>
     );
 }
