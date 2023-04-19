@@ -3,7 +3,7 @@ import Humour from '../humour';
 import { GetServerSideProps, GetServerSidePropsContext, InferGetServerSidePropsType } from 'next';
 import { IHumour, SendHumourProps } from '@/Interfaces/Humour';
 import api from "@/lib/axios"
-import { TopBar } from '@/layouts/TopBar';
+import { TopBar } from '@/layouts/TopBar/TopBar';
 import { NavBar } from '@/layouts/NavBar/NavBar';
 
 export const getServerSideProps: GetServerSideProps<SendHumourProps> = async (context: GetServerSidePropsContext) => {
@@ -24,8 +24,7 @@ export default function Home({ humours }: InferGetServerSidePropsType<typeof get
                             dark:text-DARK_THEME_TEXT
                              h-screen w-screen'>
 
-                <div className='bg-LIGHT_THEME_BACKGROUND dark:bg-DARK_THEME_BACKGROUND_SECONDARY
-                                mt-4 mr-4 ml-4 lg:h-1/4 rounded-xl'>
+                <div className="lg:h-1/4">
                     <TopBar />
                 </div>
 
