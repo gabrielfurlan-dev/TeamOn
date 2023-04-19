@@ -25,12 +25,15 @@ module.exports = {
             DARK_THEME_TEXT: '#D9D9D9',
             DARK_THEME_BACKGROUND: '#1F1F1F',
             DARK_THEME_BACKGROUND_SECONDARY: '#000000',
+            DARK_THEME_HOVER: "#11111F",
+            DARK_THEME_HOVER_RED: "#ab1919",
 
             LIGHT_THEME_TITLE: '#222222',
             LIGHT_THEME_TEXT: '#646464',
-
             LIGHT_THEME_BACKGROUND: '#FFFFFF',
-            LIGHT_THEME_BACKGROUND_SECONDARY: '#F6F6F6'
+            LIGHT_THEME_BACKGROUND_SECONDARY: '#F6F6F6',
+            LIGHT_THEME_HOVER: '#EFF6FF',
+            LIGHT_THEME_HOVER_RED: '#374151'
           }
         },
     },
