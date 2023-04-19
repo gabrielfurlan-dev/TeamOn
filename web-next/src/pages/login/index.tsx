@@ -1,16 +1,16 @@
 import { useRouter } from "next/router";
-import Image from "next/image";
-import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
+import { useSupabaseClient } from "@supabase/auth-helpers-react";
 
-import imageLogin from "@/assets/images/login-screen-image.png";
 import {
     GoogleLogo,
     FacebookLogo,
     GithubLogo,
     DiscordLogo,
 } from "phosphor-react";
+
 import { LoginButton } from "@/components/Buttons/LoginButton/LoginButton";
 import Logo from "@/assets/Logo_TeamOn";
+
 import { useState } from "react";
 import { InputText } from "@/components/Buttons/InputText";
 
@@ -32,6 +32,7 @@ export default function Login() {
             provider: "github",
         });
     }
+
     async function signInWithDiscord() {
         const { data, error } = await supabase.auth.signInWithOAuth({
             provider: "discord",
@@ -69,7 +70,7 @@ export default function Login() {
                 </div>
             </div>
 
-            <div className=" h-full flex flex-col justify-center">
+            <div className=" h-full flex flex-col justify-center dark:bg-DARK_THEME_BACKGROUND">
 
                 <div className="flex flex-col items-center w-full">
                     <div className=" flex flex-col w-full max-w-screen-sm">
@@ -95,7 +96,7 @@ export default function Login() {
                                 />
 
                                 <button
-                                    className="bg-GREEN border border-GRAY text-md rounded-lg w-2/3 py-2 px-4"
+                                    className="bg-GREEN border text-white text-md rounded-lg w-2/3 py-2 px-4"
                                     onClick={() => signInWithEmail()}
                                 > Continuar com email </button>
                             </div>
