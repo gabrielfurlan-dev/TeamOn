@@ -1,6 +1,7 @@
+import { ProfileButton } from '@/components/Buttons/ProfileButton';
 import ToggleButton from '@/components/Buttons/ToggleButton';
 import { Card } from '@/components/Cards/Card';
-import { Bell, Calendar, Info, Megaphone, Rocket, Storefront, UserCircle, Users } from 'phosphor-react';
+import { Bell, Calendar, Megaphone, Rocket, Storefront, UserCircle, Users } from 'phosphor-react';
 import React from 'react';
 
 export function TopBar() {
@@ -9,9 +10,8 @@ export function TopBar() {
 
         <div className='flex flex-col h-full'>
             <div className='flex flex-row-reverse mx-4 mt-4 gap-3'>
-                <button><UserCircle size={32} /></button>
+                <ProfileButton />
                 <button><Bell size={32} /></button>
-                <button><Info size={32} /></button>
                 <ToggleButton />
             </div>
 
@@ -35,15 +35,15 @@ export function TopBar() {
                     url=''
                 />
                 <Card
-                    className='bg-LIGHT_BLUE dark:bg-DARK_THEME_BACKGROUND text-WHITE hover:text-LIGHT_GRAY dark:text-LIGHT_BLUE dark:hover:bg-LIGHT_BLUE dark:hover:brightness-100 dark:hover:text-white hover:scale-95'
-                    title={'PDI'}
-                    icon={Rocket}
-                    url=''
-                />
-                <Card
                     className='bg-RED dark:bg-DARK_THEME_BACKGROUND text-WHITE hover:text-LIGHT_GRAY dark:text-RED dark:hover:bg-RED dark:hover:brightness-100 dark:hover:text-white hover:scale-95'
                     title={'Agenda'}
                     icon={Calendar}
+                    url=''
+                />
+                <Card
+                    className='bg-LIGHT_BLUE dark:bg-DARK_THEME_BACKGROUND text-WHITE hover:text-LIGHT_GRAY dark:text-LIGHT_BLUE dark:hover:bg-LIGHT_BLUE dark:hover:brightness-100 dark:hover:text-white hover:scale-95'
+                    title={'PDI'}
+                    icon={Rocket}
                     url=''
                 />
             </div>
