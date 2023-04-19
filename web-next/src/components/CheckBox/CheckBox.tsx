@@ -24,6 +24,7 @@ const CheckboxDemo: React.FC<checkboxProps> = ({ title, checked, setChecked }) =
                       justify-center
                       shadow-lg
                       border-solid border-2.5 border-GRAY
+                      dark:bg-black
                       hover:bg-sky-100
                       focus:outline-none
                       focus:ring"
