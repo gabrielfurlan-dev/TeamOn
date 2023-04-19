@@ -52,7 +52,7 @@ export function ProfileButton() {
 
                         <div className="py-2">
                             <button onClick={handleSignOut} className="flex w-40 mx-2 rounded px-4 py-2 text-sm text-gray-700
-                            hover:bg-red-50 dark:hover:bg-DARK_THEME_HOVER_RED transition dark:text-gray-200 dark:hover:text-white">Sign out</button>
+                            hover:bg-red-50 dark:hover:bg-DARK_THEME_HOVER_RED transition dark:text-gray-200 dark:hover:text-white">Sair</button>
                         </div>
 
                     </div>
