@@ -1,12 +1,12 @@
-using System.Text;
-using System.Net;
 using Microsoft.EntityFrameworkCore;
-using System.Net.WebSockets;
-using TeamOn.Domain.Humours.Repositories;
-using TeamOn.Infra.Repositories.Humour;
-using TeamOn.Domain.Humours.Commands.Handlers;
-using TeamOn.Infra.Contexts;
 using TeamOn.Api.Hubs;
+using TeamOn.Domain.Humours.Commands.Handlers;
+using TeamOn.Domain.Humours.Repositories;
+using TeamOn.Domain.Store.Comands.Handlers;
+using TeamOn.Domain.Store.Repositories;
+using TeamOn.Infra.Contexts;
+using TeamOn.Infra.Repositories.Humour;
+using TeamOn.Infra.Repositories.Store;
 
 DotNetEnv.Env.Load();
 
@@ -19,6 +19,8 @@ builder.Services.AddTransient<IHumourRepository, HumourRepository>();
 builder.Services.AddTransient<SendHumourHandler, SendHumourHandler>();
 builder.Services.AddTransient<GetHumourHandler, GetHumourHandler>();
 builder.Services.AddTransient<GetTodaysHumoursHandler, GetTodaysHumoursHandler>();
+builder.Services.AddTransient<GetStoreItemsHandler, GetStoreItemsHandler>();
+builder.Services.AddTransient<IStoreRepository, StoreRepository>();
 
 // builder.Services.AddDbContext<HumourContext>(options 
 //     => options.UseNpgsql(builder.Configuration.GetConnectionString(System.Environment.GetEnvironmentVariable("SUPABASE_CONNECTION_STRING"))));
