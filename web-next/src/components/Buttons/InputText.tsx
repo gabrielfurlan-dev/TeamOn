@@ -1,20 +1,26 @@
 import { SetStateAction } from "react";
 
-type inputProps={
-    value?:string;
-    placeHolder?:string,
-    type?:("email"|"password"|undefined),
-    onChange:(value: SetStateAction<any>) => void;
+type inputProps = {
+    id?: string,
+    value?: string;
+    placeHolder?: string,
+    type?: ("email" | "password" | undefined),
+    width?: number,
+    height?: number,
+    onChange?: (value: SetStateAction<any>) => void;
 }
 
-export function InputText({value, placeHolder, type, onChange:method}:inputProps) {
+export function InputText({ id, value, placeHolder, type, width, height, onChange: method }: inputProps) {
     return (
         <>
             <input
-                className=" border border-GRAY text-md rounded-lg w-2/3 py-2 px-4"
+                id={id}
+                className=" border border-GRAY text-md rounded-lg py-2 px-4 dark:bg-DARK_THEME_BACKGROUND"
                 placeholder={placeHolder}
                 type={type}
                 value={value}
+                width={width}
+                height={height}
                 onChange={method}
             />
         </>
