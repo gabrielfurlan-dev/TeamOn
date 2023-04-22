@@ -10,7 +10,7 @@ export default function profile() {
     const [userData, setUserData] = useState({
         urlProfileImg: "https://images.unsplash.com/photo-1531891437562-4301cf35b7e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
         userName: "Seu nome",
-        position: "Cargo",
+        occupation: "Cargo",
         biography: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur aliquam exercitationem voluptas fugit dolore? Quisquam rerum esse, nobis distinctio hic dolores quae molestiae consequatur blanditiis beatae natus, placeat, laborum sequi!",
         email: "email@exemple.com",
         skills: ["Habilidade 1", "Habilidade 2"]
@@ -36,8 +36,8 @@ export default function profile() {
                     </div>
 
                     <div className="flex flex-col">
-                        <label htmlFor="txtPostition">Função</label>
-                        <InputText height={32} id="txtPostition" placeHolder={userData.position} />
+                        <label htmlFor="txtOccupation">Ocupação</label>
+                        <InputText height={32} id="txtOccupation" placeHolder={userData.occupation} />
                     </div>
 
                     <div className="flex flex-col">
@@ -65,28 +65,6 @@ export default function profile() {
                                 })
                             }
                         </div>
-                    </div>
-
-
-                    <div className="flex flex-col">
-                        <label htmlFor="txtEmail">Email</label>
-                        <InputText height={32} id="txtEmail" placeHolder={userData.email} />
-                    </div>
-                    <div className="flex flex-col">
-                        <label htmlFor="txtEmail">Email</label>
-                        <InputText height={32} id="txtEmail" placeHolder={userData.email} />
-                    </div>
-                    <div className="flex flex-col">
-                        <label htmlFor="txtEmail">Email</label>
-                        <InputText height={32} id="txtEmail" placeHolder={userData.email} />
-                    </div>
-                    <div className="flex flex-col">
-                        <label htmlFor="txtEmail">Email</label>
-                        <InputText height={32} id="txtEmail" placeHolder={userData.email} />
-                    </div>
-                    <div className="flex flex-col">
-                        <label htmlFor="txtEmail">Email</label>
-                        <InputText height={32} id="txtEmail" placeHolder={userData.email} />
                     </div>
                 </form>
             </div>
