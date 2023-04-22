@@ -32,8 +32,9 @@ module.exports = {
             LIGHT_THEME_TEXT: '#646464',
             LIGHT_THEME_BACKGROUND: '#FFFFFF',
             LIGHT_THEME_BACKGROUND_SECONDARY: '#F6F6F6',
-            LIGHT_THEME_HOVER: '#EFF6FF',
-            LIGHT_THEME_HOVER_RED: '#374151'
+            LIGHT_THEME_HOVER_BLUE: '#EFF6FF',
+            LIGHT_THEME_HOVER_GRAY: '#F3F4F6',
+            LIGHT_THEME_HOVER_RED: '#FEF2F2'
           }
         },
     },
