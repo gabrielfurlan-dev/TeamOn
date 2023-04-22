@@ -16,7 +16,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
             supabaseClient={supabaseClient}
             initialSession={pageProps.initialSession}
         >
-            <div className="flex col">
+            <div className="flex col h-screen">
                 <ThemeProvider theme={theme}>
                     <DarkThemeProvider>
                         <Component {...pageProps} />
