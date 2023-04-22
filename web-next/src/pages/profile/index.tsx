@@ -24,7 +24,7 @@ export default function profile() {
 
     return (
         <DefaultScreen hideCards={true}>
-            <div className="ml-10 p-10 h-full">
+            <div className="m-10 lg:ml-20 h-full ">
                 <form className="flex-col grid gap-4 lg:w-1/2">
                     <div className="flex flex-col">
                         <ProfilePicture imageUrl={userData.urlProfileImg} size={256} />
@@ -65,6 +65,28 @@ export default function profile() {
                                 })
                             }
                         </div>
+                    </div>
+
+
+                    <div className="flex flex-col">
+                        <label htmlFor="txtEmail">Email</label>
+                        <InputText height={32} id="txtEmail" placeHolder={userData.email} />
+                    </div>
+                    <div className="flex flex-col">
+                        <label htmlFor="txtEmail">Email</label>
+                        <InputText height={32} id="txtEmail" placeHolder={userData.email} />
+                    </div>
+                    <div className="flex flex-col">
+                        <label htmlFor="txtEmail">Email</label>
+                        <InputText height={32} id="txtEmail" placeHolder={userData.email} />
+                    </div>
+                    <div className="flex flex-col">
+                        <label htmlFor="txtEmail">Email</label>
+                        <InputText height={32} id="txtEmail" placeHolder={userData.email} />
+                    </div>
+                    <div className="flex flex-col">
+                        <label htmlFor="txtEmail">Email</label>
+                        <InputText height={32} id="txtEmail" placeHolder={userData.email} />
                     </div>
                 </form>
             </div>

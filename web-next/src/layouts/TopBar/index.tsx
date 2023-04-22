@@ -54,7 +54,6 @@ export function TopBar({ hideCars }: topBarProps) {
                     </div>
                 )
             }
-
         </div >
     );
 }
