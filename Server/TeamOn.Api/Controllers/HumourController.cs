@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using TeamOn.Domain.Contracts.Commands;
 using TeamOn.Domain.Humours.Commands.Handlers;

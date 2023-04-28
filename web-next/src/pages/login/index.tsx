@@ -105,10 +105,10 @@ export default function Login() {
                         <p className="pt-10 leading-6 text-center">Or</p>
 
                         <div className="flex justify-center">
-                            <LoginButton metodo={signInWithGoogle} icon={GoogleLogo} />
-                            <LoginButton metodo={signInWithFacebook} icon={FacebookLogo} />
-                            <LoginButton metodo={signInWithDiscord} icon={DiscordLogo} />
-                            <LoginButton metodo={signInWithGitHub} icon={GithubLogo} />
+                            <LoginButton loginFunction={signInWithGoogle} icon={GoogleLogo} />
+                            <LoginButton loginFunction={signInWithFacebook} icon={FacebookLogo} />
+                            <LoginButton loginFunction={signInWithDiscord} icon={DiscordLogo} />
+                            <LoginButton loginFunction={signInWithGitHub} icon={GithubLogo} />
                         </div>
 
                         <div className="flex justify-center mt-4 m-20 text-center">

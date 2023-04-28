@@ -8,8 +8,5 @@ namespace TeamOn.Infra.Contexts
         public HumourContext(DbContextOptions<HumourContext> options) : base(options) {}
 
         public DbSet<HumourEntity> Humours { get; set; }
-
-        // protected override void OnConfiguring(DbContextOptionsBuilder options)
-        //     => options.UseNpgsql(System.Environment.GetEnvironmentVariable("SUPABASE_CONNECTION_STRING"));
     }
 }

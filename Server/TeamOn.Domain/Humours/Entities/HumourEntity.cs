@@ -13,9 +13,7 @@ namespace TeamOn.Domain.Humours.Entities
                            string message,
                            string refCompany)
         {
-            Id = Guid.NewGuid().ToString();
             SendDate = DateTime.Now;
-
             HumourStatus = humourStatus;
             RefUser = refUser;
             Message = message;

@@ -28,10 +28,10 @@ namespace TeamOn.Domain.Humours.Commands.Inputs
             AddNotifications(
                 new Contract<Notification>()
                     .Requires()
-                    .IsNullOrEmpty(RefUser, "RefUser", "Informe um usuário.")
+                    .IsNotNullOrEmpty(RefUser, "RefUser", "Informe um usuário.")
             );
 
-            return true;
+            return IsValid;
         }
     }
 }

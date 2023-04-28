@@ -15,7 +15,7 @@ namespace TeamOn.Domain.Users.Commands.Hanlders
         public ICommandResult Handle(CreateUserCommand command)
         {
             if (!command.Validate())
-                return new GenericCommandResult(null, false, "Command não é válido.");
+                return new GenericCommandResult(null, false, $"Command não é válido. {command.Notifications.First().Message}");
 
             try
             {
@@ -26,9 +26,9 @@ namespace TeamOn.Domain.Users.Commands.Hanlders
                 return new GenericCommandResult(null, true, "Usuário cadastrado com sucesso.");
 
             }
-            catch (System.Exception)
+            catch (System.Exception ex)
             {
-                return new GenericCommandResult(null, false, "Não foi possível cadastrar o usuário.");
+                return new GenericCommandResult(null, false, $"Não foi possível cadastrar o usuário.{Environment.NewLine}{ex.Message}");
             }
         }
     }
