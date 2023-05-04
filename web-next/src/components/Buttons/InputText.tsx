@@ -15,7 +15,7 @@ export function InputText({ id, value, placeHolder, type, width, height, onChang
         <>
             <input
                 id={id}
-                className=" border border-GRAY text-md rounded-lg py-2 px-4 dark:bg-DARK_THEME_BACKGROUND"
+                className=" w-full border border-GRAY text-md rounded-lg py-2 px-4 dark:bg-DARK_THEME_BACKGROUND"
                 placeholder={placeHolder}
                 type={type}
                 value={value}

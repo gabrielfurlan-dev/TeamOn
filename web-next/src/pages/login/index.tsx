@@ -80,7 +80,7 @@ export default function Login() {
                         </h1>
 
                         <div className="flex flex-col mt-4 w-full items-center focus:border-0">
-                            <div className="w-full items-center flex flex-col gap-4">
+                            <div className="w-2/3 items-center flex flex-col gap-4">
 
                                 <InputText
                                     placeHolder="email@example.com.br"
@@ -96,7 +96,7 @@ export default function Login() {
                                 />
 
                                 <button
-                                    className="bg-GREEN border text-white text-md rounded-lg w-2/3 py-2 px-4"
+                                    className="bg-GREEN border text-white text-md rounded-lg w-full py-2 px-4"
                                     onClick={() => signInWithEmail()}
                                 > Continuar com email </button>
                             </div>
